@@ -56,6 +56,9 @@ namespace WinAppProyectoVerduras.Clientes
             AbrirFormulariosHijos(new frmClientesRegistros());
         }
 
-      
+        private void pnlContenedor_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

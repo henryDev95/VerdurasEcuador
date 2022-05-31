@@ -77,7 +77,7 @@ namespace WinAppProyectoVerduras.Clientes
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Roboto Condensed", 12F);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.button1.Location = new System.Drawing.Point(138, 57);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(88, 34);
@@ -92,7 +92,7 @@ namespace WinAppProyectoVerduras.Clientes
             this.btnEliminar.FlatAppearance.BorderSize = 0;
             this.btnEliminar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminar.Font = new System.Drawing.Font("Roboto Condensed", 12F);
+            this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnEliminar.Location = new System.Drawing.Point(353, 57);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(88, 34);
@@ -107,7 +107,7 @@ namespace WinAppProyectoVerduras.Clientes
             this.btnEditar.FlatAppearance.BorderSize = 0;
             this.btnEditar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditar.Font = new System.Drawing.Font("Roboto Condensed", 12F);
+            this.btnEditar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnEditar.Location = new System.Drawing.Point(246, 57);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(88, 34);
@@ -122,7 +122,7 @@ namespace WinAppProyectoVerduras.Clientes
             this.btnBuscar.FlatAppearance.BorderSize = 0;
             this.btnBuscar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
             this.btnBuscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBuscar.Font = new System.Drawing.Font("Roboto Condensed", 12F);
+            this.btnBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.btnBuscar.Location = new System.Drawing.Point(32, 57);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(88, 34);
@@ -134,11 +134,11 @@ namespace WinAppProyectoVerduras.Clientes
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Roboto Black", 15.75F, System.Drawing.FontStyle.Bold);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold);
             this.label1.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.label1.Location = new System.Drawing.Point(193, 16);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(90, 25);
+            this.label1.Size = new System.Drawing.Size(98, 25);
             this.label1.TabIndex = 0;
             this.label1.Text = "Clientes";
             // 
@@ -155,25 +155,26 @@ namespace WinAppProyectoVerduras.Clientes
             this.pnlContenedor.Name = "pnlContenedor";
             this.pnlContenedor.Size = new System.Drawing.Size(668, 378);
             this.pnlContenedor.TabIndex = 3;
+            this.pnlContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlContenedor_Paint);
             // 
             // lblCliente
             // 
             this.lblCliente.AutoSize = true;
-            this.lblCliente.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblCliente.Location = new System.Drawing.Point(366, 53);
             this.lblCliente.Name = "lblCliente";
-            this.lblCliente.Size = new System.Drawing.Size(57, 19);
+            this.lblCliente.Size = new System.Drawing.Size(58, 20);
             this.lblCliente.TabIndex = 15;
             this.lblCliente.Text = "Cliente";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.label3.Location = new System.Drawing.Point(100, 52);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(126, 19);
+            this.label3.Size = new System.Drawing.Size(139, 20);
             this.label3.TabIndex = 14;
             this.label3.Text = "Cliente estrella: ";
             // 
@@ -189,21 +190,21 @@ namespace WinAppProyectoVerduras.Clientes
             // lblEmpleadosRegistrados
             // 
             this.lblEmpleadosRegistrados.AutoSize = true;
-            this.lblEmpleadosRegistrados.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmpleadosRegistrados.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblEmpleadosRegistrados.Location = new System.Drawing.Point(366, 34);
             this.lblEmpleadosRegistrados.Name = "lblEmpleadosRegistrados";
-            this.lblEmpleadosRegistrados.Size = new System.Drawing.Size(65, 19);
+            this.lblEmpleadosRegistrados.Size = new System.Drawing.Size(65, 20);
             this.lblEmpleadosRegistrados.TabIndex = 12;
             this.lblEmpleadosRegistrados.Text = "Numero";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.label2.Location = new System.Drawing.Point(100, 33);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(240, 19);
+            this.label2.Size = new System.Drawing.Size(263, 20);
             this.label2.TabIndex = 11;
             this.label2.Text = "Numero de clientes registrados:";
             // 

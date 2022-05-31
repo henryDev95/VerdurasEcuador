@@ -70,8 +70,22 @@ namespace WinAppProyectoVerduras.Login
             return true;
         }
 
-       
+        private void botonImagen_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (openFileDialog1.ShowDialog() == DialogResult.OK)
+                {
+                    string imagen = openFileDialog1.FileName; // gurda la direccion de la imagen
+                    pbxFotoPerfil.Image = Image.FromFile(imagen); // carga la imagen¡
+                    pbxFotoPerfil.SizeMode = PictureBoxSizeMode.StretchImage;
 
-
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("El archivo seleccionado no es un tipo de imagen válido");
+            }
+        }
     }
 }
