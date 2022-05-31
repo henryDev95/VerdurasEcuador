@@ -31,21 +31,27 @@ namespace WinAppProyectoVerduras.Login
         {
             this.pnlContenedor = new System.Windows.Forms.Panel();
             this.pnlDelantero = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnContlogin = new System.Windows.Forms.Panel();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.panelBarraTitulo = new System.Windows.Forms.Panel();
+            this.pictMini = new System.Windows.Forms.PictureBox();
+            this.pictuCerrar = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textCorreo = new WinAppProyectoVerduras.Clases.TextBox();
             this.txtContraseña = new WinAppProyectoVerduras.Clases.TextBox();
-            this.txtCorreo = new WinAppProyectoVerduras.Clases.TextBox();
             this.btnIngresar = new WinAppProyectoVerduras.Clases.Botones();
             this.pnlContenedor.SuspendLayout();
             this.pnlDelantero.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
             this.pnContlogin.SuspendLayout();
+            this.panelBarraTitulo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictMini)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictuCerrar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
@@ -53,13 +59,15 @@ namespace WinAppProyectoVerduras.Login
             // pnlContenedor
             // 
             this.pnlContenedor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.pnlContenedor.Controls.Add(this.panelBarraTitulo);
             this.pnlContenedor.Controls.Add(this.pnlDelantero);
             this.pnlContenedor.Cursor = System.Windows.Forms.Cursors.Default;
             this.pnlContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnlContenedor.Location = new System.Drawing.Point(0, 0);
             this.pnlContenedor.Name = "pnlContenedor";
-            this.pnlContenedor.Size = new System.Drawing.Size(664, 378);
+            this.pnlContenedor.Size = new System.Drawing.Size(661, 420);
             this.pnlContenedor.TabIndex = 0;
+            this.pnlContenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlContenedor_Paint);
             // 
             // pnlDelantero
             // 
@@ -71,8 +79,90 @@ namespace WinAppProyectoVerduras.Login
             this.pnlDelantero.Controls.Add(this.panel1);
             this.pnlDelantero.Location = new System.Drawing.Point(27, 35);
             this.pnlDelantero.Name = "pnlDelantero";
-            this.pnlDelantero.Size = new System.Drawing.Size(609, 310);
+            this.pnlDelantero.Size = new System.Drawing.Size(606, 352);
             this.pnlDelantero.TabIndex = 0;
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(43)))));
+            this.panel1.Controls.Add(this.pnContlogin);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel1.Location = new System.Drawing.Point(293, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(313, 352);
+            this.panel1.TabIndex = 0;
+            // 
+            // pnContlogin
+            // 
+            this.pnContlogin.Controls.Add(this.textCorreo);
+            this.pnContlogin.Controls.Add(this.linkLabel1);
+            this.pnContlogin.Controls.Add(this.txtContraseña);
+            this.pnContlogin.Controls.Add(this.pictureBox2);
+            this.pnContlogin.Controls.Add(this.pictureBox6);
+            this.pnContlogin.Controls.Add(this.btnIngresar);
+            this.pnContlogin.Controls.Add(this.label1);
+            this.pnContlogin.Location = new System.Drawing.Point(51, 28);
+            this.pnContlogin.Name = "pnContlogin";
+            this.pnContlogin.Size = new System.Drawing.Size(215, 257);
+            this.pnContlogin.TabIndex = 0;
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.LinkColor = System.Drawing.Color.White;
+            this.linkLabel1.Location = new System.Drawing.Point(80, 231);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(132, 16);
+            this.linkLabel1.TabIndex = 1;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Desea Registrarse ?";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.label1.Location = new System.Drawing.Point(22, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(193, 31);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "BIENVENIDO";
+            // 
+            // panelBarraTitulo
+            // 
+            this.panelBarraTitulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panelBarraTitulo.Controls.Add(this.pictMini);
+            this.panelBarraTitulo.Controls.Add(this.pictuCerrar);
+            this.panelBarraTitulo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panelBarraTitulo.Location = new System.Drawing.Point(0, 0);
+            this.panelBarraTitulo.Name = "panelBarraTitulo";
+            this.panelBarraTitulo.Size = new System.Drawing.Size(661, 39);
+            this.panelBarraTitulo.TabIndex = 1;
+            this.panelBarraTitulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelBarraTitulo_MouseDown);
+            // 
+            // pictMini
+            // 
+            this.pictMini.Image = global::WinAppProyectoVerduras.Properties.Resources.minimizar;
+            this.pictMini.Location = new System.Drawing.Point(570, 0);
+            this.pictMini.Name = "pictMini";
+            this.pictMini.Size = new System.Drawing.Size(38, 39);
+            this.pictMini.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictMini.TabIndex = 1;
+            this.pictMini.TabStop = false;
+            this.pictMini.Click += new System.EventHandler(this.pictMini_Click);
+            // 
+            // pictuCerrar
+            // 
+            this.pictuCerrar.Image = global::WinAppProyectoVerduras.Properties.Resources.cerrar4;
+            this.pictuCerrar.Location = new System.Drawing.Point(614, 0);
+            this.pictuCerrar.Name = "pictuCerrar";
+            this.pictuCerrar.Size = new System.Drawing.Size(44, 39);
+            this.pictuCerrar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictuCerrar.TabIndex = 0;
+            this.pictuCerrar.TabStop = false;
+            this.pictuCerrar.Click += new System.EventHandler(this.pictuCerrar_Click);
             // 
             // pictureBox1
             // 
@@ -84,30 +174,6 @@ namespace WinAppProyectoVerduras.Login
             this.pictureBox1.Size = new System.Drawing.Size(271, 257);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
-            // 
-            // panel1
-            // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(43)))));
-            this.panel1.Controls.Add(this.pnContlogin);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(305, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(304, 310);
-            this.panel1.TabIndex = 0;
-            // 
-            // pnContlogin
-            // 
-            this.pnContlogin.Controls.Add(this.txtContraseña);
-            this.pnContlogin.Controls.Add(this.textBox1);
-            this.pnContlogin.Controls.Add(this.pictureBox2);
-            this.pnContlogin.Controls.Add(this.pictureBox6);
-            this.pnContlogin.Controls.Add(this.txtCorreo);
-            this.pnContlogin.Controls.Add(this.btnIngresar);
-            this.pnContlogin.Controls.Add(this.label1);
-            this.pnContlogin.Location = new System.Drawing.Point(51, 28);
-            this.pnContlogin.Name = "pnContlogin";
-            this.pnContlogin.Size = new System.Drawing.Size(215, 257);
-            this.pnContlogin.TabIndex = 0;
             // 
             // pictureBox2
             // 
@@ -131,25 +197,31 @@ namespace WinAppProyectoVerduras.Login
             this.pictureBox6.TabIndex = 18;
             this.pictureBox6.TabStop = false;
             // 
-            // label1
+            // textCorreo
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Roboto", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.Location = new System.Drawing.Point(22, 20);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(171, 33);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "BIENVENIDO";
-            // 
-            // textBox1
-            // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.textBox1.Location = new System.Drawing.Point(46, 86);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(148, 13);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+            this.textCorreo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.textCorreo.BackColor = System.Drawing.Color.White;
+            this.textCorreo.BackgroundImage = global::WinAppProyectoVerduras.Properties.Resources.loguin;
+            this.textCorreo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.textCorreo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.textCorreo.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.textCorreo.BorderRadius = 10;
+            this.textCorreo.BorderSize = 2;
+            this.textCorreo.Location = new System.Drawing.Point(39, 78);
+            this.textCorreo.Margin = new System.Windows.Forms.Padding(4);
+            this.textCorreo.Multiline = false;
+            this.textCorreo.Name = "textCorreo";
+            this.textCorreo.Padding = new System.Windows.Forms.Padding(7);
+            this.textCorreo.PasswordChar = false;
+            this.textCorreo.PlaceholderColor = System.Drawing.Color.White;
+            this.textCorreo.PlaceholderText = "";
+            this.textCorreo.Size = new System.Drawing.Size(165, 28);
+            this.textCorreo.TabIndex = 21;
+            this.textCorreo.Texts = "Correo Electrónico";
+            this.textCorreo.UnderlinedStyle = false;
+            this.textCorreo.Enter += new System.EventHandler(this.textCorreo_Enter);
+            this.textCorreo.Leave += new System.EventHandler(this.textCorreo_Leave);
             // 
             // txtContraseña
             // 
@@ -177,33 +249,6 @@ namespace WinAppProyectoVerduras.Login
             this.txtContraseña.Enter += new System.EventHandler(this.txtContraseña_Enter);
             this.txtContraseña.Leave += new System.EventHandler(this.txtContraseña_Leave);
             // 
-            // txtCorreo
-            // 
-            this.txtCorreo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCorreo.BackColor = System.Drawing.Color.White;
-            this.txtCorreo.BackgroundImage = global::WinAppProyectoVerduras.Properties.Resources.loguin;
-            this.txtCorreo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.txtCorreo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.txtCorreo.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.txtCorreo.BorderRadius = 10;
-            this.txtCorreo.BorderSize = 2;
-            this.txtCorreo.Location = new System.Drawing.Point(39, 78);
-            this.txtCorreo.Margin = new System.Windows.Forms.Padding(4);
-            this.txtCorreo.Multiline = false;
-            this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Padding = new System.Windows.Forms.Padding(7);
-            this.txtCorreo.PasswordChar = false;
-            this.txtCorreo.PlaceholderColor = System.Drawing.Color.White;
-            this.txtCorreo.PlaceholderText = "";
-            this.txtCorreo.Size = new System.Drawing.Size(165, 28);
-            this.txtCorreo.TabIndex = 5;
-            this.txtCorreo.Texts = "Correo";
-            this.txtCorreo.UnderlinedStyle = false;
-            this.txtCorreo.Enter += new System.EventHandler(this.txtCorreo_Enter);
-            this.txtCorreo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCorreo_KeyPress);
-            this.txtCorreo.Leave += new System.EventHandler(this.txtCorreo_Leave);
-            // 
             // btnIngresar
             // 
             this.btnIngresar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
@@ -230,7 +275,7 @@ namespace WinAppProyectoVerduras.Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(664, 378);
+            this.ClientSize = new System.Drawing.Size(661, 420);
             this.Controls.Add(this.pnlContenedor);
             this.Cursor = System.Windows.Forms.Cursors.Hand;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -240,10 +285,13 @@ namespace WinAppProyectoVerduras.Login
             this.Load += new System.EventHandler(this.frmLogin_Load);
             this.pnlContenedor.ResumeLayout(false);
             this.pnlDelantero.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.pnContlogin.ResumeLayout(false);
             this.pnContlogin.PerformLayout();
+            this.panelBarraTitulo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictMini)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictuCerrar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
@@ -259,10 +307,13 @@ namespace WinAppProyectoVerduras.Login
         private System.Windows.Forms.Panel pnContlogin;
         private System.Windows.Forms.Label label1;
         private Clases.Botones btnIngresar;
-        private Clases.TextBox txtCorreo;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox6;
         private Clases.TextBox txtContraseña;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.LinkLabel linkLabel1;
+        private Clases.TextBox textCorreo;
+        private System.Windows.Forms.Panel panelBarraTitulo;
+        private System.Windows.Forms.PictureBox pictMini;
+        private System.Windows.Forms.PictureBox pictuCerrar;
     }
 }

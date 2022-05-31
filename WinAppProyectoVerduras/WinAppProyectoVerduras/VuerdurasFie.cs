@@ -29,23 +29,21 @@ namespace WinAppProyectoVerduras
 
         public void cargarEmpleados()
         {
-            if (!(File.Exists("e:\\empleados.xml")))
+
+            if (File.Exists("e:\\empleados.xml"))
             {
                 empleados = new DataSet1.EmpleadoDataTable();
-                empleados.WriteXml("e:\\empleados.xml");
+                this.empleados.Clear();
+                this.empleados.ReadXml("c:\\empleados.xml");
             }
-            else
-            {
-                empleados = new DataSet1.EmpleadoDataTable();
-                this.empleados.ReadXml("e:\\empleados.xml");
-            }
+            
         }
 
 
         public void guardarEmpleado(object[] vec)
         {
             empleados.Rows.Add(vec);
-            empleados.WriteXml("e:\\empleados.xml");
+            empleados.WriteXml("c:\\empleados.xml");
 
         }
 

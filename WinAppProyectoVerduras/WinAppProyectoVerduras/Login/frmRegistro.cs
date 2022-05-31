@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 
 namespace WinAppProyectoVerduras.Login
@@ -22,7 +23,9 @@ namespace WinAppProyectoVerduras.Login
 
         private void lklRegresar_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            this.Close();
+            Login.frmLogin login = new frmLogin();
+            login.Show();
+            this.Hide();
         }
 
         private void btnRegistrar_Click(object sender, EventArgs e)
@@ -58,9 +61,7 @@ namespace WinAppProyectoVerduras.Login
             {
                 MessageBox.Show("Ingrese todos los datos");
                 return false;
-
-
-            }
+             }
             if (txtContraseña.Texts != txtConfirmarContraseña.Texts)
             {
                 MessageBox.Show("Las constrasenas no coinsiden");
@@ -87,5 +88,56 @@ namespace WinAppProyectoVerduras.Login
                 MessageBox.Show("El archivo seleccionado no es un tipo de imagen válido");
             }
         }
+
+        private void txtContraseña_Enter(object sender, EventArgs e)
+        {
+            if (txtContraseña.Texts == "Contraseña")
+            {
+                txtContraseña.Texts = "";
+                txtContraseña.PasswordChar = true;
+            }
+
+        }
+
+        private void txtContraseña_Leave(object sender, EventArgs e)
+        {
+            if (txtContraseña.Texts == "")
+            {
+                txtContraseña.Texts = "Contraseña";
+                txtContraseña.PasswordChar = false;
+            }
+
+        }
+
+        private void txtConfirmarContraseña_Enter(object sender, EventArgs e)
+        {
+            if (txtConfirmarContraseña.Texts == "Confirmar Contraseña")
+            {
+                txtConfirmarContraseña.Texts = "";
+                txtConfirmarContraseña.PasswordChar = true;
+            }
+        }
+
+        private void txtConfirmarContraseña_Leave(object sender, EventArgs e)
+        {
+
+            if (txtConfirmarContraseña.Texts == "")
+            {
+                txtConfirmarContraseña.Texts = "Confirmar Contraseña";
+                txtConfirmarContraseña.PasswordChar = false;
+            }
+
+        }
+
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+         private void panelBarra_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+    
     }
 }

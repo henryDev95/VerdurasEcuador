@@ -136,23 +136,11 @@
     <Compile Include="frmEmpleado.Designer.cs">
       <DependentUpon>frmEmpleado.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login\frmCarga.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Login\frmCarga.Designer.cs">
-      <DependentUpon>frmCarga.cs</DependentUpon>
-    </Compile>
     <Compile Include="Login\frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Login\frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Login\frmLoginEmpleado.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Login\frmLoginEmpleado.Designer.cs">
-      <DependentUpon>frmLoginEmpleado.cs</DependentUpon>
     </Compile>
     <Compile Include="Login\frmRegistro.cs">
       <SubType>Form</SubType>
@@ -268,14 +256,8 @@
     <EmbeddedResource Include="frmEmpleado.resx">
       <DependentUpon>frmEmpleado.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login\frmCarga.resx">
-      <DependentUpon>frmCarga.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Login\frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Login\frmLoginEmpleado.resx">
-      <DependentUpon>frmLoginEmpleado.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login\frmRegistro.resx">
       <DependentUpon>frmRegistro.cs</DependentUpon>
@@ -427,6 +409,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Calendario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cerrar4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimizar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-office-phone-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-office-phone-100.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

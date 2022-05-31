@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 namespace WinAppProyectoVerduras.Login
 {
@@ -51,17 +52,7 @@ namespace WinAppProyectoVerduras.Login
             objPrincipal.Show();
         }
 
-        private void txtCorreo_Enter(object sender, EventArgs e)
-        {
-            if (txtCorreo.Texts == "Correo")
-                txtCorreo.Texts = "";
-        }
-
-        private void txtCorreo_Leave(object sender, EventArgs e)
-        {
-            if (txtCorreo.Texts == "")
-                txtCorreo.Texts = "Correo";
-        }
+        
 
         private void txtContraseña_Enter(object sender, EventArgs e)
         {
@@ -81,13 +72,7 @@ namespace WinAppProyectoVerduras.Login
             } 
         }
 
-        private void txtCorreo_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar == Convert.ToChar(Keys.Enter))
-            {
-                textBox1.Focus();
-            }
-        }
+       
 
         private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -95,6 +80,59 @@ namespace WinAppProyectoVerduras.Login
             {
                 txtContraseña.Focus();
             }
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Login.frmRegistro fromRegistro = new frmRegistro();
+            fromRegistro.Show();
+            this.Hide();
+        }
+
+        
+        private void textCorreo_Leave(object sender, EventArgs e)
+        {
+            if (textCorreo.Texts == "")
+            {
+                textCorreo.Texts = "Correo Electrónico";
+                textCorreo.PasswordChar = false;
+            }
+
+        }
+
+        private void textCorreo_Enter(object sender, EventArgs e)
+        {
+            if (textCorreo.Texts == "Correo Electrónico")
+            {
+                textCorreo.Texts = "";
+                
+            }
+        }
+
+        private void pnlContenedor_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictuCerrar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void pictMini_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+
+        private void panelBarraTitulo_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }

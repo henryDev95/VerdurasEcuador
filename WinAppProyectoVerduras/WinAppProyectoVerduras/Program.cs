@@ -16,7 +16,7 @@ namespace WinAppProyectoVerduras
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Login.frmCarga());
+            Application.Run(new Login.frmLogin());
         }
     }
 }

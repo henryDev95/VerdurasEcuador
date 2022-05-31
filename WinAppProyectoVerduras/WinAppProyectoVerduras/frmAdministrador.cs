@@ -72,5 +72,10 @@ namespace WinAppProyectoVerduras
         {
             AbrirFormulariosHijos(new Reportes.frmReportes());
         }
+
+        private void pnlContenedor_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
