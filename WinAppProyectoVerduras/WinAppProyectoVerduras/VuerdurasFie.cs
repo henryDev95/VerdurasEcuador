@@ -17,34 +17,44 @@ namespace WinAppProyectoVerduras
 
         
     }
+    // clase empleados
     public class cEmpleados
     {
-
-        DataSet1.EmpleadoDataTable empleados;
+        DataSet1.EmpleadoDataTable empleados = new DataSet1.EmpleadoDataTable();
 
         public cEmpleados()
         {
-            cargarEmpleados();
+          
         }
-
-        public void cargarEmpleados()
+        
+        public bool ValidadExisteArchivo()
         {
+            bool exise = false;
 
             if (File.Exists("e:\\empleados.xml"))
             {
-                empleados = new DataSet1.EmpleadoDataTable();
-                this.empleados.Clear();
-                this.empleados.ReadXml("c:\\empleados.xml");
+                exise = true;
             }
-            
+            else
+            {
+                System.Console.WriteLine("No existe el contenido");
+            }
+
+            return exise;
         }
 
 
         public void guardarEmpleado(object[] vec)
         {
-            empleados.Rows.Add(vec);
-            empleados.WriteXml("c:\\empleados.xml");
-
+            if (ValidadExisteArchivo())
+            {
+                this.empleados.ReadXml("E:\\empleados.xml");
+            }
+          
+                empleados.Rows.Add(vec);
+                empleados.WriteXml("E:\\empleados.xml");
+                System.Console.WriteLine("Guardado Automaticamente");
+                
         }
 
         public DataSet1.EmpleadoDataTable getEmpleadosAll()

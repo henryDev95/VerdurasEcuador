@@ -30,28 +30,25 @@ namespace WinAppProyectoVerduras.Login
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            if (validarDatos())
+            if (!validarDatos())
             {
-                Random rd = new Random();
-
-                int rand_num = rd.Next(100, 200);
-
-                object[] vec = new object[9];
-                vec[0] = rand_num;
-                vec[1] = txtNombre.Texts;
-                vec[2] = txtApellido.Texts;
-                vec[3] = txtCorreo.Texts;
+                object[] vec = new object[12];
+                vec[1] = "name imahen";
+                vec[2] = "name imahen";
+                vec[3] = "name imahen";
                 vec[4] = "name imahen";
-                vec[5] = txtContraseña.Texts;
-                vec[6] = txtCedula.Texts;
-                vec[7] = txtDireccion.Texts;
-                vec[8] = comboBoxRol.Text;
+                vec[5] = "name imahen";
+                vec[6] = "name imahen";
+                vec[7] = "name imahen";
+                vec[8] = "name imahen";
+                vec[9] = "name imahen";
+                vec[10] = "name imahen";
+                vec[11] = "name imahen";
                 
                 empleados.guardarEmpleado(vec);
                 MessageBox.Show("El empleado se registro correctamente", "Registro", MessageBoxButtons.OK);
-                this.Close();
+                
             }
-            else { return; }
         
         }
 
@@ -62,7 +59,7 @@ namespace WinAppProyectoVerduras.Login
                 MessageBox.Show("Ingrese todos los datos");
                 return false;
              }
-            if (txtContraseña.Texts != txtConfirmarContraseña.Texts)
+            if (txtContraseña.Texts != texBxConfirmarContra.Texts)
             {
                 MessageBox.Show("Las constrasenas no coinsiden");
                 return false;
@@ -83,7 +80,7 @@ namespace WinAppProyectoVerduras.Login
 
                 }
             }
-            catch (Exception ex)
+            catch
             {
                 MessageBox.Show("El archivo seleccionado no es un tipo de imagen válido");
             }
@@ -109,25 +106,7 @@ namespace WinAppProyectoVerduras.Login
 
         }
 
-        private void txtConfirmarContraseña_Enter(object sender, EventArgs e)
-        {
-            if (txtConfirmarContraseña.Texts == "Confirmar Contraseña")
-            {
-                txtConfirmarContraseña.Texts = "";
-                txtConfirmarContraseña.PasswordChar = true;
-            }
-        }
-
-        private void txtConfirmarContraseña_Leave(object sender, EventArgs e)
-        {
-
-            if (txtConfirmarContraseña.Texts == "")
-            {
-                txtConfirmarContraseña.Texts = "Confirmar Contraseña";
-                txtConfirmarContraseña.PasswordChar = false;
-            }
-
-        }
+       
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
@@ -239,6 +218,25 @@ namespace WinAppProyectoVerduras.Login
             if (txtCorreo.Texts == "Correo Electrónico")
             {
                 txtCorreo.Texts = "";
+            }
+        }
+
+        private void texBxConfirmarContra_Leave(object sender, EventArgs e)
+        {
+            if (texBxConfirmarContra.Texts == "")
+            {
+                texBxConfirmarContra.Texts = "Confirmar Contraseña";
+                texBxConfirmarContra.PasswordChar = false;
+            }
+
+        }
+
+        private void texBxConfirmarContra_Enter(object sender, EventArgs e)
+        {
+            if (texBxConfirmarContra.Texts == "ConfirmarContra")
+            {
+                texBxConfirmarContra.Texts = "";
+                texBxConfirmarContra.PasswordChar = true;
             }
         }
     }
