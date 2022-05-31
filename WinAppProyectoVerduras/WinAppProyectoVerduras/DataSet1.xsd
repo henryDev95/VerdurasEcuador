@@ -21,11 +21,12 @@
               <xs:element name="imagen" msprop:Generator_ColumnVarNameInTable="columnimagen" msprop:Generator_ColumnPropNameInRow="imagen" msprop:Generator_ColumnPropNameInTable="imagenColumn" msprop:Generator_UserColumnName="imagen" type="xs:string" minOccurs="0" />
               <xs:element name="categoria" msprop:Generator_ColumnVarNameInTable="columncategoria" msprop:Generator_ColumnPropNameInRow="categoria" msprop:Generator_ColumnPropNameInTable="categoriaColumn" msprop:Generator_UserColumnName="categoria" type="xs:string" minOccurs="0" />
               <xs:element name="peso" msprop:Generator_ColumnVarNameInTable="columnpeso" msprop:Generator_ColumnPropNameInRow="peso" msprop:Generator_ColumnPropNameInTable="pesoColumn" msprop:Generator_UserColumnName="peso" type="xs:string" minOccurs="0" />
-              <xs:element name="descuento" msdata:Caption="tiempo_vida" msprop:Generator_ColumnVarNameInTable="columndescuento" msprop:Generator_ColumnPropNameInRow="descuento" msprop:Generator_ColumnPropNameInTable="descuentoColumn" msprop:Generator_UserColumnName="descuento" type="xs:string" minOccurs="0" />
-              <xs:element name="distribuidor" msprop:Generator_ColumnVarNameInTable="columndistribuidor" msprop:Generator_ColumnPropNameInRow="distribuidor" msprop:Generator_ColumnPropNameInTable="distribuidorColumn" msprop:Generator_UserColumnName="distribuidor" type="xs:string" minOccurs="0" />
+              <xs:element name="precio_venta" msdata:Caption="tiempo_vida" msprop:Generator_ColumnVarNameInTable="columnprecio_venta" msprop:Generator_ColumnPropNameInRow="precio_venta" msprop:Generator_ColumnPropNameInTable="precio_ventaColumn" msprop:Generator_UserColumnName="precio_venta" type="xs:string" minOccurs="0" />
+              <xs:element name="proveedor" msprop:Generator_ColumnVarNameInTable="columnproveedor" msprop:Generator_ColumnPropNameInRow="proveedor" msprop:Generator_ColumnPropNameInTable="proveedorColumn" msprop:Generator_UserColumnName="proveedor" type="xs:string" minOccurs="0" />
               <xs:element name="estado" msprop:Generator_ColumnVarNameInTable="columnestado" msprop:Generator_ColumnPropNameInRow="estado" msprop:Generator_ColumnPropNameInTable="estadoColumn" msprop:Generator_UserColumnName="estado" type="xs:string" minOccurs="0" />
               <xs:element name="color" msprop:Generator_ColumnVarNameInTable="columncolor" msprop:Generator_ColumnPropNameInRow="color" msprop:Generator_ColumnPropNameInTable="colorColumn" msprop:Generator_UserColumnName="color" type="xs:string" minOccurs="0" />
               <xs:element name="cantidad" msprop:Generator_ColumnVarNameInTable="columncantidad" msprop:Generator_ColumnPropNameInRow="cantidad" msprop:Generator_ColumnPropNameInTable="cantidadColumn" msprop:Generator_UserColumnName="cantidad" type="xs:string" minOccurs="0" />
+              <xs:element name="marca" msprop:Generator_ColumnVarNameInTable="columnmarca" msprop:Generator_ColumnPropNameInRow="marca" msprop:Generator_ColumnPropNameInTable="marcaColumn" msprop:Generator_UserColumnName="marca" type="xs:string" minOccurs="0" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -77,7 +78,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Empleado" msprop:Generator_TableClassName="EmpleadoDataTable" msprop:Generator_TableVarName="tableEmpleado" msprop:Generator_TablePropName="Empleado" msprop:Generator_RowDeletingName="EmpleadoRowDeleting" msprop:Generator_RowChangingName="EmpleadoRowChanging" msprop:Generator_RowEvHandlerName="EmpleadoRowChangeEventHandler" msprop:Generator_RowDeletedName="EmpleadoRowDeleted" msprop:Generator_UserTableName="Empleado" msprop:Generator_RowChangedName="EmpleadoRowChanged" msprop:Generator_RowEvArgName="EmpleadoRowChangeEvent" msprop:Generator_RowClassName="EmpleadoRow">
+        <xs:element name="Empleado" msprop:Generator_TableClassName="EmpleadoDataTable" msprop:Generator_TableVarName="tableEmpleado" msprop:Generator_RowChangedName="EmpleadoRowChanged" msprop:Generator_TablePropName="Empleado" msprop:Generator_RowDeletingName="EmpleadoRowDeleting" msprop:Generator_RowChangingName="EmpleadoRowChanging" msprop:Generator_RowEvHandlerName="EmpleadoRowChangeEventHandler" msprop:Generator_RowDeletedName="EmpleadoRowDeleted" msprop:Generator_RowClassName="EmpleadoRow" msprop:Generator_UserTableName="Empleado" msprop:Generator_RowEvArgName="EmpleadoRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="id" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnid" msprop:Generator_ColumnPropNameInRow="id" msprop:Generator_ColumnPropNameInTable="idColumn" msprop:Generator_UserColumnName="id" type="xs:int" minOccurs="0" />
@@ -121,19 +122,19 @@
       <xs:selector xpath=".//mstns:Empleado" />
       <xs:field xpath="mstns:id" />
     </xs:unique>
-    <xs:keyref name="FK_Cliente_Factura" refer="ClienteKey1" msprop:rel_Generator_UserChildTable="Factura" msprop:rel_Generator_ChildPropName="GetFacturaRows" msprop:rel_Generator_UserRelationName="FK_Cliente_Factura" msprop:rel_Generator_ParentPropName="ClienteRow" msprop:rel_Generator_RelationVarName="relationFK_Cliente_Factura" msprop:rel_Generator_UserParentTable="Cliente" msdata:UpdateRule="None" msdata:DeleteRule="None">
+    <xs:keyref name="FK_Cliente_Factura" refer="ClienteKey1" msprop:rel_Generator_UserChildTable="Factura" msprop:rel_Generator_ChildPropName="GetFacturaRows" msprop:rel_Generator_UserRelationName="FK_Cliente_Factura" msprop:rel_Generator_RelationVarName="relationFK_Cliente_Factura" msprop:rel_Generator_UserParentTable="Cliente" msprop:rel_Generator_ParentPropName="ClienteRow" msdata:UpdateRule="None" msdata:DeleteRule="None">
       <xs:selector xpath=".//mstns:Factura" />
       <xs:field xpath="mstns:id_cliente" />
     </xs:keyref>
-    <xs:keyref name="FK_Producto_DetalleVenta" refer="ProductoKey1" msprop:rel_Generator_UserChildTable="DetalleVenta" msprop:rel_Generator_ChildPropName="GetDetalleVentaRows" msprop:rel_Generator_UserRelationName="FK_Producto_DetalleVenta" msprop:rel_Generator_ParentPropName="ProductoRow" msprop:rel_Generator_RelationVarName="relationFK_Producto_DetalleVenta" msprop:rel_Generator_UserParentTable="Producto" msdata:UpdateRule="None" msdata:DeleteRule="None">
-      <xs:selector xpath=".//mstns:DetalleVenta" />
-      <xs:field xpath="mstns:id_producto" />
-    </xs:keyref>
-    <xs:keyref name="FK_Factura_DetalleVenta" refer="FacturaKey1" msprop:rel_Generator_UserChildTable="DetalleVenta" msprop:rel_Generator_ChildPropName="GetDetalleVentaRows" msprop:rel_Generator_UserRelationName="FK_Factura_DetalleVenta" msprop:rel_Generator_RelationVarName="relationFK_Factura_DetalleVenta" msprop:rel_Generator_UserParentTable="Factura" msprop:rel_Generator_ParentPropName="FacturaRow" msdata:UpdateRule="None" msdata:DeleteRule="None">
+    <xs:keyref name="FK_Factura_DetalleVenta" refer="FacturaKey1" msprop:rel_Generator_UserChildTable="DetalleVenta" msprop:rel_Generator_ChildPropName="GetDetalleVentaRows" msprop:rel_Generator_UserRelationName="FK_Factura_DetalleVenta" msprop:rel_Generator_ParentPropName="FacturaRow" msprop:rel_Generator_RelationVarName="relationFK_Factura_DetalleVenta" msprop:rel_Generator_UserParentTable="Factura" msdata:UpdateRule="None" msdata:DeleteRule="None">
       <xs:selector xpath=".//mstns:DetalleVenta" />
       <xs:field xpath="mstns:id_factura" />
     </xs:keyref>
-    <xs:keyref name="FK_Categoria_Producto" refer="CategoriaKey1" msprop:rel_Generator_UserChildTable="Producto" msprop:rel_Generator_ChildPropName="GetProductoRows" msprop:rel_Generator_UserRelationName="FK_Categoria_Producto" msprop:rel_Generator_RelationVarName="relationFK_Categoria_Producto" msprop:rel_Generator_UserParentTable="Categoria" msprop:rel_Generator_ParentPropName="CategoriaRow" msdata:UpdateRule="None" msdata:DeleteRule="None">
+    <xs:keyref name="FK_Producto_DetalleVenta" refer="ProductoKey1" msprop:rel_Generator_UserChildTable="DetalleVenta" msprop:rel_Generator_ChildPropName="GetDetalleVentaRows" msprop:rel_Generator_UserRelationName="FK_Producto_DetalleVenta" msprop:rel_Generator_RelationVarName="relationFK_Producto_DetalleVenta" msprop:rel_Generator_UserParentTable="Producto" msprop:rel_Generator_ParentPropName="ProductoRow" msdata:UpdateRule="None" msdata:DeleteRule="None">
+      <xs:selector xpath=".//mstns:DetalleVenta" />
+      <xs:field xpath="mstns:id_producto" />
+    </xs:keyref>
+    <xs:keyref name="FK_Categoria_Producto" refer="CategoriaKey1" msprop:rel_Generator_UserChildTable="Producto" msprop:rel_Generator_ChildPropName="GetProductoRows" msprop:rel_Generator_UserRelationName="FK_Categoria_Producto" msprop:rel_Generator_ParentPropName="CategoriaRow" msprop:rel_Generator_RelationVarName="relationFK_Categoria_Producto" msprop:rel_Generator_UserParentTable="Categoria" msdata:UpdateRule="None" msdata:DeleteRule="None">
       <xs:selector xpath=".//mstns:Producto" />
       <xs:field xpath="mstns:categoria" />
     </xs:keyref>
