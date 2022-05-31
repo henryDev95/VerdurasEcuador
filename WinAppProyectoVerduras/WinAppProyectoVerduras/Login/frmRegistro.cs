@@ -44,7 +44,7 @@ namespace WinAppProyectoVerduras.Login
                 vec[4] = "name imahen";
                 vec[5] = txtContraseña.Texts;
                 vec[6] = txtCedula.Texts;
-                vec[7] = txtCiudad.Texts;
+                vec[7] = txtDireccion.Texts;
                 vec[8] = comboBoxRol.Text;
                 
                 empleados.guardarEmpleado(vec);
@@ -57,7 +57,7 @@ namespace WinAppProyectoVerduras.Login
 
         public bool validarDatos()
         {
-            if (txtCedula.Texts == "" || txtNombre.Texts == "" || txtApellido.Texts == "" || txtCorreo.Texts == "" || txtCiudad.Texts == "" || txtCorreo.Texts == "")
+            if (txtCedula.Texts == "" || txtNombre.Texts == "" || txtApellido.Texts == "" || txtCorreo.Texts == "" || txtDireccion.Texts == "" || txtCorreo.Texts == "")
             {
                 MessageBox.Show("Ingrese todos los datos");
                 return false;
@@ -138,6 +138,108 @@ namespace WinAppProyectoVerduras.Login
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
-    
+
+        private void txtCedula_Leave(object sender, EventArgs e)
+        {
+            if (txtCedula.Texts == "")
+            {
+                txtCedula.Texts = "Cédula";
+               
+            }
+        }
+
+        private void txtCedula_Enter(object sender, EventArgs e)
+        {
+            if (txtCedula.Texts == "Cédula")
+            {
+                txtCedula.Texts = "";
+             
+            }
+        }
+
+        private void txtNombre_Leave(object sender, EventArgs e)
+        {
+
+            if (txtNombre.Texts == "")
+            {
+                txtNombre.Texts = "Nombre";        
+            }
+        }
+
+        private void txtNombre_Enter(object sender, EventArgs e)
+        {
+            if (txtNombre.Texts == "Nombre")
+            {
+                txtNombre.Texts = "";
+            }
+        }
+
+        private void txtApellido_Leave(object sender, EventArgs e)
+        {
+
+            if (txtApellido.Texts == "")
+            {
+                txtApellido.Texts = "Apellido";
+            }
+        }
+
+        private void txtApellido_Enter(object sender, EventArgs e)
+        {
+            if (txtApellido.Texts == "Apellido")
+            {
+                txtApellido.Texts = "";
+            }
+        }
+
+        private void txtDireccion_Leave(object sender, EventArgs e)
+        {
+            if (txtDireccion.Texts == "")
+            {
+                txtDireccion.Texts = "Dirección";
+            }
+          
+        }
+
+        private void txtDireccion_Enter(object sender, EventArgs e)
+        {
+            if (txtDireccion.Texts == "Dirección")
+            {
+                txtDireccion.Texts = "";
+            }
+        }
+
+        private void textTelefono_Leave(object sender, EventArgs e)
+        {
+            if (textTelefono.Texts == "")
+            {
+                textTelefono.Texts = "Teléfono";
+            }
+        }
+
+        private void textTelefono_Enter(object sender, EventArgs e)
+        {
+            if (textTelefono.Texts == "Telefono")
+            {
+                textTelefono.Texts = "";
+            }
+        }
+
+        private void txtCorreo_Leave(object sender, EventArgs e)
+        {
+
+            if (txtCorreo.Texts == "")
+            {
+                txtCorreo.Texts = "Correo Electrónico";
+            }
+            
+        }
+
+        private void txtCorreo_Enter(object sender, EventArgs e)
+        {
+            if (txtCorreo.Texts == "Correo Electrónico")
+            {
+                txtCorreo.Texts = "";
+            }
+        }
     }
 }

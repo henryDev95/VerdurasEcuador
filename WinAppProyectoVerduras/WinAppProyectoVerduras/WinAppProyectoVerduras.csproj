@@ -422,5 +422,11 @@
   <ItemGroup>
     <None Include="Resources\icons8-office-phone-100.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-office-phone-50%281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-gender-equality-30.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

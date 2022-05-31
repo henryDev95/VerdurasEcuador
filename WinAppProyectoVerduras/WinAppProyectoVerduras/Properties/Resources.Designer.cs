@@ -193,6 +193,16 @@ namespace WinAppProyectoVerduras.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_gender_equality_30 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-gender-equality-30", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_office_phone_100 {
             get {
                 object obj = ResourceManager.GetObject("icons8-office-phone-100", resourceCulture);
@@ -206,6 +216,16 @@ namespace WinAppProyectoVerduras.Properties {
         internal static System.Drawing.Bitmap icons8_office_phone_30 {
             get {
                 object obj = ResourceManager.GetObject("icons8-office-phone-30", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_office_phone_50_1_ {
+            get {
+                object obj = ResourceManager.GetObject("icons8-office-phone-50(1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

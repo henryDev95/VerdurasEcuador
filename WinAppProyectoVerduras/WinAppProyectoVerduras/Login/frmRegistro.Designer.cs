@@ -35,45 +35,44 @@ namespace WinAppProyectoVerduras.Login
             this.pnContlogin = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.botonImagen = new WinAppProyectoVerduras.Clases.Botones();
-            this.txtConfirmarContraseña = new WinAppProyectoVerduras.Clases.TextBox();
-            this.btnRegistrar = new WinAppProyectoVerduras.Clases.Botones();
+            this.pbxFotoPerfil = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.lklRegresar = new System.Windows.Forms.LinkLabel();
             this.label1 = new System.Windows.Forms.Label();
             this.pnlContRegistro = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.comboBoxGenero = new System.Windows.Forms.ComboBox();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.comboBoxRol = new System.Windows.Forms.ComboBox();
             this.pnlContenedor = new System.Windows.Forms.Panel();
             this.panelBarra = new System.Windows.Forms.Panel();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.pbxFotoPerfil = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.botonImagen = new WinAppProyectoVerduras.Clases.Botones();
             this.txtContraseña = new WinAppProyectoVerduras.Clases.TextBox();
             this.txtCorreo = new WinAppProyectoVerduras.Clases.TextBox();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.txtConfirmarContraseña = new WinAppProyectoVerduras.Clases.TextBox();
+            this.btnRegistrar = new WinAppProyectoVerduras.Clases.Botones();
             this.txtCedula = new WinAppProyectoVerduras.Clases.TextBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtNombre = new WinAppProyectoVerduras.Clases.TextBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.txtApellido = new WinAppProyectoVerduras.Clases.TextBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox10 = new System.Windows.Forms.PictureBox();
             this.textTelefono = new WinAppProyectoVerduras.Clases.TextBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.txtCiudad = new WinAppProyectoVerduras.Clases.TextBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.txtDireccion = new WinAppProyectoVerduras.Clases.TextBox();
             this.pnlDelantero.SuspendLayout();
             this.panel1.SuspendLayout();
             this.pnContlogin.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.pnlContRegistro.SuspendLayout();
-            this.pnlContenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxFotoPerfil)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            this.pnlContRegistro.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -81,6 +80,7 @@ namespace WinAppProyectoVerduras.Login
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            this.pnlContenedor.SuspendLayout();
             this.SuspendLayout();
             // 
             // pnlDelantero
@@ -145,84 +145,53 @@ namespace WinAppProyectoVerduras.Login
             this.label2.TabIndex = 1;
             this.label2.Text = "Ingresar foto de perfil";
             // 
-            // botonImagen
+            // pbxFotoPerfil
             // 
-            this.botonImagen.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.botonImagen.BackColor = System.Drawing.Color.Silver;
-            this.botonImagen.BackgroundColor = System.Drawing.Color.Silver;
-            this.botonImagen.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.botonImagen.BorderRadius = 10;
-            this.botonImagen.BorderSize = 2;
-            this.botonImagen.FlatAppearance.BorderSize = 0;
-            this.botonImagen.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.botonImagen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.botonImagen.ForeColor = System.Drawing.Color.Black;
-            this.botonImagen.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.botonImagen.Location = new System.Drawing.Point(119, 42);
-            this.botonImagen.Name = "botonImagen";
-            this.botonImagen.Size = new System.Drawing.Size(101, 25);
-            this.botonImagen.TabIndex = 21;
-            this.botonImagen.Text = "Añadir ";
-            this.botonImagen.TextColor = System.Drawing.Color.Black;
-            this.botonImagen.UseVisualStyleBackColor = false;
-            this.botonImagen.Click += new System.EventHandler(this.botonImagen_Click);
+            this.pbxFotoPerfil.BackColor = System.Drawing.Color.GhostWhite;
+            this.pbxFotoPerfil.Location = new System.Drawing.Point(20, 42);
+            this.pbxFotoPerfil.Name = "pbxFotoPerfil";
+            this.pbxFotoPerfil.Size = new System.Drawing.Size(93, 66);
+            this.pbxFotoPerfil.TabIndex = 7;
+            this.pbxFotoPerfil.TabStop = false;
             // 
-            // txtConfirmarContraseña
+            // pictureBox7
             // 
-            this.txtConfirmarContraseña.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtConfirmarContraseña.BackColor = System.Drawing.Color.White;
-            this.txtConfirmarContraseña.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.txtConfirmarContraseña.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.txtConfirmarContraseña.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.txtConfirmarContraseña.BorderRadius = 10;
-            this.txtConfirmarContraseña.BorderSize = 2;
-            this.txtConfirmarContraseña.Location = new System.Drawing.Point(46, 222);
-            this.txtConfirmarContraseña.Margin = new System.Windows.Forms.Padding(4);
-            this.txtConfirmarContraseña.Multiline = false;
-            this.txtConfirmarContraseña.Name = "txtConfirmarContraseña";
-            this.txtConfirmarContraseña.Padding = new System.Windows.Forms.Padding(7);
-            this.txtConfirmarContraseña.PasswordChar = false;
-            this.txtConfirmarContraseña.PlaceholderColor = System.Drawing.Color.White;
-            this.txtConfirmarContraseña.PlaceholderText = "";
-            this.txtConfirmarContraseña.Size = new System.Drawing.Size(178, 28);
-            this.txtConfirmarContraseña.TabIndex = 4;
-            this.txtConfirmarContraseña.Texts = "Confirmar Contraseña";
-            this.txtConfirmarContraseña.UnderlinedStyle = false;
-            this.txtConfirmarContraseña.Enter += new System.EventHandler(this.txtConfirmarContraseña_Enter);
-            this.txtConfirmarContraseña.Leave += new System.EventHandler(this.txtConfirmarContraseña_Leave);
+            this.pictureBox7.Image = global::WinAppProyectoVerduras.Properties.Resources.Contraseña___One;
+            this.pictureBox7.Location = new System.Drawing.Point(11, 179);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(28, 28);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox7.TabIndex = 20;
+            this.pictureBox7.TabStop = false;
             // 
-            // btnRegistrar
+            // pictureBox9
             // 
-            this.btnRegistrar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnRegistrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(43)))));
-            this.btnRegistrar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(43)))));
-            this.btnRegistrar.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnRegistrar.BorderRadius = 10;
-            this.btnRegistrar.BorderSize = 2;
-            this.btnRegistrar.FlatAppearance.BorderSize = 0;
-            this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegistrar.ForeColor = System.Drawing.Color.White;
-            this.btnRegistrar.Location = new System.Drawing.Point(39, 327);
-            this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(99, 48);
-            this.btnRegistrar.TabIndex = 2;
-            this.btnRegistrar.Text = "Registrar";
-            this.btnRegistrar.TextColor = System.Drawing.Color.White;
-            this.btnRegistrar.UseVisualStyleBackColor = false;
-            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
+            this.pictureBox9.Image = global::WinAppProyectoVerduras.Properties.Resources.Contraseña;
+            this.pictureBox9.Location = new System.Drawing.Point(11, 223);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(28, 28);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox9.TabIndex = 19;
+            this.pictureBox9.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = global::WinAppProyectoVerduras.Properties.Resources.Correo;
+            this.pictureBox6.Location = new System.Drawing.Point(11, 135);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(28, 28);
+            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox6.TabIndex = 17;
+            this.pictureBox6.TabStop = false;
             // 
             // lklRegresar
             // 
             this.lklRegresar.AutoSize = true;
-            this.lklRegresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lklRegresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lklRegresar.LinkColor = System.Drawing.Color.White;
-            this.lklRegresar.Location = new System.Drawing.Point(169, 358);
+            this.lklRegresar.Location = new System.Drawing.Point(172, 355);
             this.lklRegresar.Name = "lklRegresar";
-            this.lklRegresar.Size = new System.Drawing.Size(62, 16);
+            this.lklRegresar.Size = new System.Drawing.Size(72, 20);
             this.lklRegresar.TabIndex = 6;
             this.lklRegresar.TabStop = true;
             this.lklRegresar.Text = "Cancelar";
@@ -252,13 +221,54 @@ namespace WinAppProyectoVerduras.Login
             this.pnlContRegistro.Controls.Add(this.pictureBox10);
             this.pnlContRegistro.Controls.Add(this.textTelefono);
             this.pnlContRegistro.Controls.Add(this.pictureBox5);
-            this.pnlContRegistro.Controls.Add(this.txtCiudad);
+            this.pnlContRegistro.Controls.Add(this.txtDireccion);
             this.pnlContRegistro.Controls.Add(this.pictureBox8);
             this.pnlContRegistro.Controls.Add(this.comboBoxRol);
             this.pnlContRegistro.Location = new System.Drawing.Point(29, 28);
             this.pnlContRegistro.Name = "pnlContRegistro";
             this.pnlContRegistro.Size = new System.Drawing.Size(309, 371);
             this.pnlContRegistro.TabIndex = 7;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
+            this.pictureBox1.Image = global::WinAppProyectoVerduras.Properties.Resources.Cedula;
+            this.pictureBox1.Location = new System.Drawing.Point(13, 42);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(28, 28);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox1.TabIndex = 7;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox2.Image = global::WinAppProyectoVerduras.Properties.Resources.Cliente;
+            this.pictureBox2.Location = new System.Drawing.Point(13, 89);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(28, 28);
+            this.pictureBox2.TabIndex = 9;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox3.Image = global::WinAppProyectoVerduras.Properties.Resources.Persona;
+            this.pictureBox3.Location = new System.Drawing.Point(13, 135);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(28, 28);
+            this.pictureBox3.TabIndex = 11;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox4.Image = global::WinAppProyectoVerduras.Properties.Resources.Direccion;
+            this.pictureBox4.Location = new System.Drawing.Point(13, 179);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(28, 28);
+            this.pictureBox4.TabIndex = 13;
+            this.pictureBox4.TabStop = false;
             // 
             // comboBoxGenero
             // 
@@ -271,6 +281,36 @@ namespace WinAppProyectoVerduras.Login
             this.comboBoxGenero.Size = new System.Drawing.Size(163, 21);
             this.comboBoxGenero.TabIndex = 22;
             this.comboBoxGenero.Text = "Genero";
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox10.Image = global::WinAppProyectoVerduras.Properties.Resources.icons8_gender_equality_30;
+            this.pictureBox10.Location = new System.Drawing.Point(13, 330);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(28, 28);
+            this.pictureBox10.TabIndex = 21;
+            this.pictureBox10.TabStop = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = global::WinAppProyectoVerduras.Properties.Resources.icons8_office_phone_50_1_;
+            this.pictureBox5.Location = new System.Drawing.Point(13, 222);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(28, 28);
+            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox5.TabIndex = 19;
+            this.pictureBox5.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.pictureBox8.Image = global::WinAppProyectoVerduras.Properties.Resources.Cliente;
+            this.pictureBox8.Location = new System.Drawing.Point(14, 277);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(28, 28);
+            this.pictureBox8.TabIndex = 18;
+            this.pictureBox8.TabStop = false;
             // 
             // comboBoxRol
             // 
@@ -308,23 +348,28 @@ namespace WinAppProyectoVerduras.Login
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // pbxFotoPerfil
+            // botonImagen
             // 
-            this.pbxFotoPerfil.BackColor = System.Drawing.Color.GhostWhite;
-            this.pbxFotoPerfil.Location = new System.Drawing.Point(20, 42);
-            this.pbxFotoPerfil.Name = "pbxFotoPerfil";
-            this.pbxFotoPerfil.Size = new System.Drawing.Size(93, 66);
-            this.pbxFotoPerfil.TabIndex = 7;
-            this.pbxFotoPerfil.TabStop = false;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Location = new System.Drawing.Point(11, 179);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(28, 28);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox7.TabIndex = 20;
-            this.pictureBox7.TabStop = false;
+            this.botonImagen.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.botonImagen.BackColor = System.Drawing.Color.Silver;
+            this.botonImagen.BackgroundColor = System.Drawing.Color.Silver;
+            this.botonImagen.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.botonImagen.BorderRadius = 10;
+            this.botonImagen.BorderSize = 2;
+            this.botonImagen.FlatAppearance.BorderSize = 0;
+            this.botonImagen.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.botonImagen.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.botonImagen.ForeColor = System.Drawing.Color.Black;
+            this.botonImagen.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.botonImagen.Location = new System.Drawing.Point(119, 42);
+            this.botonImagen.Name = "botonImagen";
+            this.botonImagen.Size = new System.Drawing.Size(101, 25);
+            this.botonImagen.TabIndex = 21;
+            this.botonImagen.Text = "Añadir ";
+            this.botonImagen.TextColor = System.Drawing.Color.Black;
+            this.botonImagen.UseVisualStyleBackColor = false;
+            this.botonImagen.Click += new System.EventHandler(this.botonImagen_Click);
             // 
             // txtContraseña
             // 
@@ -373,24 +418,55 @@ namespace WinAppProyectoVerduras.Login
             this.txtCorreo.TabIndex = 16;
             this.txtCorreo.Texts = "Correo Electrónico";
             this.txtCorreo.UnderlinedStyle = false;
+            this.txtCorreo.Enter += new System.EventHandler(this.txtCorreo_Enter);
+            this.txtCorreo.Leave += new System.EventHandler(this.txtCorreo_Leave);
             // 
-            // pictureBox9
+            // txtConfirmarContraseña
             // 
-            this.pictureBox9.Location = new System.Drawing.Point(11, 223);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(28, 28);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox9.TabIndex = 19;
-            this.pictureBox9.TabStop = false;
+            this.txtConfirmarContraseña.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtConfirmarContraseña.BackColor = System.Drawing.Color.White;
+            this.txtConfirmarContraseña.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.txtConfirmarContraseña.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.txtConfirmarContraseña.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.txtConfirmarContraseña.BorderRadius = 10;
+            this.txtConfirmarContraseña.BorderSize = 2;
+            this.txtConfirmarContraseña.Location = new System.Drawing.Point(46, 222);
+            this.txtConfirmarContraseña.Margin = new System.Windows.Forms.Padding(4);
+            this.txtConfirmarContraseña.Multiline = false;
+            this.txtConfirmarContraseña.Name = "txtConfirmarContraseña";
+            this.txtConfirmarContraseña.Padding = new System.Windows.Forms.Padding(7);
+            this.txtConfirmarContraseña.PasswordChar = false;
+            this.txtConfirmarContraseña.PlaceholderColor = System.Drawing.Color.White;
+            this.txtConfirmarContraseña.PlaceholderText = "";
+            this.txtConfirmarContraseña.Size = new System.Drawing.Size(178, 28);
+            this.txtConfirmarContraseña.TabIndex = 4;
+            this.txtConfirmarContraseña.Texts = "Confirmar Contraseña";
+            this.txtConfirmarContraseña.UnderlinedStyle = false;
+            this.txtConfirmarContraseña.Enter += new System.EventHandler(this.txtConfirmarContraseña_Enter);
+            this.txtConfirmarContraseña.Leave += new System.EventHandler(this.txtConfirmarContraseña_Leave);
             // 
-            // pictureBox6
+            // btnRegistrar
             // 
-            this.pictureBox6.Location = new System.Drawing.Point(11, 135);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(28, 28);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox6.TabIndex = 17;
-            this.pictureBox6.TabStop = false;
+            this.btnRegistrar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnRegistrar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(43)))));
+            this.btnRegistrar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(9)))), ((int)(((byte)(43)))));
+            this.btnRegistrar.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnRegistrar.BorderRadius = 10;
+            this.btnRegistrar.BorderSize = 2;
+            this.btnRegistrar.FlatAppearance.BorderSize = 0;
+            this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegistrar.ForeColor = System.Drawing.Color.White;
+            this.btnRegistrar.Location = new System.Drawing.Point(39, 327);
+            this.btnRegistrar.Name = "btnRegistrar";
+            this.btnRegistrar.Size = new System.Drawing.Size(99, 48);
+            this.btnRegistrar.TabIndex = 2;
+            this.btnRegistrar.Text = "Registrar";
+            this.btnRegistrar.TextColor = System.Drawing.Color.White;
+            this.btnRegistrar.UseVisualStyleBackColor = false;
+            this.btnRegistrar.Click += new System.EventHandler(this.btnRegistrar_Click);
             // 
             // txtCedula
             // 
@@ -414,17 +490,8 @@ namespace WinAppProyectoVerduras.Login
             this.txtCedula.TabIndex = 6;
             this.txtCedula.Texts = "Cédula";
             this.txtCedula.UnderlinedStyle = false;
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.BackgroundImage")));
-            this.pictureBox1.Image = global::WinAppProyectoVerduras.Properties.Resources.Cedula;
-            this.pictureBox1.Location = new System.Drawing.Point(13, 42);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(28, 28);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.pictureBox1.TabIndex = 7;
-            this.pictureBox1.TabStop = false;
+            this.txtCedula.Enter += new System.EventHandler(this.txtCedula_Enter);
+            this.txtCedula.Leave += new System.EventHandler(this.txtCedula_Leave);
             // 
             // txtNombre
             // 
@@ -448,15 +515,8 @@ namespace WinAppProyectoVerduras.Login
             this.txtNombre.TabIndex = 8;
             this.txtNombre.Texts = "Nombre";
             this.txtNombre.UnderlinedStyle = false;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox2.Location = new System.Drawing.Point(13, 89);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(28, 28);
-            this.pictureBox2.TabIndex = 9;
-            this.pictureBox2.TabStop = false;
+            this.txtNombre.Enter += new System.EventHandler(this.txtNombre_Enter);
+            this.txtNombre.Leave += new System.EventHandler(this.txtNombre_Leave);
             // 
             // txtApellido
             // 
@@ -480,33 +540,8 @@ namespace WinAppProyectoVerduras.Login
             this.txtApellido.TabIndex = 10;
             this.txtApellido.Texts = "Apellido";
             this.txtApellido.UnderlinedStyle = false;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox3.Location = new System.Drawing.Point(13, 135);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(28, 28);
-            this.pictureBox3.TabIndex = 11;
-            this.pictureBox3.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox4.Location = new System.Drawing.Point(13, 179);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(28, 28);
-            this.pictureBox4.TabIndex = 13;
-            this.pictureBox4.TabStop = false;
-            // 
-            // pictureBox10
-            // 
-            this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox10.Location = new System.Drawing.Point(13, 330);
-            this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(28, 28);
-            this.pictureBox10.TabIndex = 21;
-            this.pictureBox10.TabStop = false;
+            this.txtApellido.Enter += new System.EventHandler(this.txtApellido_Enter);
+            this.txtApellido.Leave += new System.EventHandler(this.txtApellido_Leave);
             // 
             // textTelefono
             // 
@@ -530,47 +565,33 @@ namespace WinAppProyectoVerduras.Login
             this.textTelefono.TabIndex = 20;
             this.textTelefono.Texts = "Telefono";
             this.textTelefono.UnderlinedStyle = false;
+            this.textTelefono.Enter += new System.EventHandler(this.textTelefono_Enter);
+            this.textTelefono.Leave += new System.EventHandler(this.textTelefono_Leave);
             // 
-            // pictureBox5
+            // txtDireccion
             // 
-            this.pictureBox5.Location = new System.Drawing.Point(13, 229);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(28, 28);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 19;
-            this.pictureBox5.TabStop = false;
-            // 
-            // txtCiudad
-            // 
-            this.txtCiudad.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.txtDireccion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCiudad.BackColor = System.Drawing.Color.White;
-            this.txtCiudad.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.txtCiudad.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.txtCiudad.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.txtCiudad.BorderRadius = 10;
-            this.txtCiudad.BorderSize = 2;
-            this.txtCiudad.Location = new System.Drawing.Point(47, 179);
-            this.txtCiudad.Margin = new System.Windows.Forms.Padding(4);
-            this.txtCiudad.Multiline = false;
-            this.txtCiudad.Name = "txtCiudad";
-            this.txtCiudad.Padding = new System.Windows.Forms.Padding(7);
-            this.txtCiudad.PasswordChar = false;
-            this.txtCiudad.PlaceholderColor = System.Drawing.Color.White;
-            this.txtCiudad.PlaceholderText = "";
-            this.txtCiudad.Size = new System.Drawing.Size(236, 28);
-            this.txtCiudad.TabIndex = 12;
-            this.txtCiudad.Texts = "Dirección";
-            this.txtCiudad.UnderlinedStyle = false;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox8.Location = new System.Drawing.Point(13, 284);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(28, 28);
-            this.pictureBox8.TabIndex = 18;
-            this.pictureBox8.TabStop = false;
+            this.txtDireccion.BackColor = System.Drawing.Color.White;
+            this.txtDireccion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.txtDireccion.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.txtDireccion.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
+            this.txtDireccion.BorderRadius = 10;
+            this.txtDireccion.BorderSize = 2;
+            this.txtDireccion.Location = new System.Drawing.Point(47, 179);
+            this.txtDireccion.Margin = new System.Windows.Forms.Padding(4);
+            this.txtDireccion.Multiline = false;
+            this.txtDireccion.Name = "txtDireccion";
+            this.txtDireccion.Padding = new System.Windows.Forms.Padding(7);
+            this.txtDireccion.PasswordChar = false;
+            this.txtDireccion.PlaceholderColor = System.Drawing.Color.White;
+            this.txtDireccion.PlaceholderText = "";
+            this.txtDireccion.Size = new System.Drawing.Size(236, 28);
+            this.txtDireccion.TabIndex = 12;
+            this.txtDireccion.Texts = "Dirección";
+            this.txtDireccion.UnderlinedStyle = false;
+            this.txtDireccion.Enter += new System.EventHandler(this.txtDireccion_Enter);
+            this.txtDireccion.Leave += new System.EventHandler(this.txtDireccion_Leave);
             // 
             // frmRegistro
             // 
@@ -589,12 +610,11 @@ namespace WinAppProyectoVerduras.Login
             this.pnContlogin.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.pnlContRegistro.ResumeLayout(false);
-            this.pnlContenedor.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbxFotoPerfil)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            this.pnlContRegistro.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -602,6 +622,7 @@ namespace WinAppProyectoVerduras.Login
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            this.pnlContenedor.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -620,7 +641,7 @@ namespace WinAppProyectoVerduras.Login
         private System.Windows.Forms.PictureBox pictureBox6;
         private Clases.TextBox txtCorreo;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private Clases.TextBox txtCiudad;
+        private Clases.TextBox txtDireccion;
         private System.Windows.Forms.PictureBox pictureBox3;
         private Clases.TextBox txtApellido;
         private System.Windows.Forms.PictureBox pictureBox2;
