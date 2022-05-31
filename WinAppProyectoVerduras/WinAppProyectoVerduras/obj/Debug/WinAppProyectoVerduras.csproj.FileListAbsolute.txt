@@ -1,0 +1,112 @@
+C:\Users\rodrigo\source\repos\Segundo Parcial\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.Properties.Resources.resources
+C:\Users\rodrigo\source\repos\Segundo Parcial\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.csproj.GenerateResource.cache
+C:\Users\rodrigo\source\repos\Segundo Parcial\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.csproj.CoreCompileInputs.cache
+C:\Users\rodrigo\source\repos\Segundo Parcial\WinAppProyectoVerduras\WinAppProyectoVerduras\bin\Debug\WinAppProyectoVerduras.exe.config
+C:\Users\rodrigo\source\repos\Segundo Parcial\WinAppProyectoVerduras\WinAppProyectoVerduras\bin\Debug\WinAppProyectoVerduras.exe
+C:\Users\rodrigo\source\repos\Segundo Parcial\WinAppProyectoVerduras\WinAppProyectoVerduras\bin\Debug\WinAppProyectoVerduras.pdb
+C:\Users\rodrigo\source\repos\Segundo Parcial\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.exe
+C:\Users\rodrigo\source\repos\Segundo Parcial\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.pdb
+C:\Users\rodrigo\source\repos\Segundo Parcial\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.Empleados.frmEmpleados.resources
+C:\Users\rodrigo\source\repos\Segundo Parcial\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.Empleados.frmEmpleadosBuscar.resources
+C:\Users\rodrigo\source\repos\Segundo Parcial\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.Empleados.frmEmpleadosEditar.resources
+C:\Users\rodrigo\source\repos\Segundo Parcial\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.Empleados.frmEmpleadosEliminar.resources
+C:\Users\rodrigo\source\repos\Segundo Parcial\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.Login.frmCarga.resources
+C:\Users\rodrigo\source\repos\Segundo Parcial\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.Login.frmLogin.resources
+C:\Users\rodrigo\source\repos\Segundo Parcial\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.Clases.TextBox.resources
+C:\Users\rodrigo\source\repos\Segundo Parcial\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.Login.frmRegistro.resources
+C:\Users\rodrigo\source\repos\Segundo Parcial\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.Clientes.frmClientes.resources
+C:\Users\rodrigo\source\repos\Segundo Parcial\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.Clientes.frmClientesBuscar.resources
+C:\Users\rodrigo\source\repos\Segundo Parcial\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.Clientes.frmClientesEditar.resources
+C:\Users\rodrigo\source\repos\Segundo Parcial\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.Clientes.frmClientesEliminar.resources
+C:\Users\rodrigo\source\repos\Segundo Parcial\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.Clientes.frmClientesRegistros.resources
+C:\Users\rodrigo\source\repos\Segundo Parcial\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.Productos.frmProductos.resources
+C:\Users\rodrigo\source\repos\Segundo Parcial\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.Productos.frmProductosBuscar.resources
+C:\Users\rodrigo\source\repos\Segundo Parcial\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.Productos.frmProductosEliminar.resources
+C:\Users\rodrigo\source\repos\Segundo Parcial\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.Productos.frmProductosRegistrar.resources
+C:\Users\rodrigo\source\repos\Segundo Parcial\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.Clases.RJComboBox.resources
+C:\Users\rodrigo\source\repos\Segundo Parcial\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.Productos.frmProductosEditar.resources
+C:\Users\rodrigo\source\repos\Segundo Parcial\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.csproj.AssemblyReference.cache
+C:\Users\rodrigo\source\repos\Segundo Parcial\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.Ventas.frmVentas.resources
+C:\Users\rodrigo\source\repos\Segundo Parcial\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.Ventas.frmVentasVender.resources
+C:\Users\rodrigo\source\repos\Segundo Parcial\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.Ventas.frmVentasBuscar.resources
+C:\Users\rodrigo\source\repos\Segundo Parcial\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.Ventas.frmVentasEditar.resources
+C:\Users\rodrigo\source\repos\Segundo Parcial\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.Reportes.frmReportes.resources
+C:\Users\rodrigo\source\repos\Segundo Parcial\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.Ventas.frmVentasEliminar.resources
+C:\Users\rodrigo\source\repos\Segundo Parcial\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.frmAdministrador.resources
+C:\Users\rodrigo\source\repos\Segundo Parcial\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.frmEmpleado.resources
+C:\Users\rodrigo\source\repos\Segundo Parcial\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.Login.frmLoginEmpleado.resources
+C:\Users\Angel\Downloads\Segundo Parcial (1)\Segundo Parcial\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.csproj.AssemblyReference.cache
+C:\Users\Angel\Downloads\Segundo Parcial (1)\Segundo Parcial\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.csproj.SuggestedBindingRedirects.cache
+C:\Users\Angel\Downloads\Segundo Parcial (1)\Segundo Parcial\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.Clases.RJComboBox.resources
+C:\Users\Angel\Downloads\Segundo Parcial (1)\Segundo Parcial\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.Clases.TextBox.resources
+C:\Users\Angel\Downloads\Segundo Parcial (1)\Segundo Parcial\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.Clientes.frmClientes.resources
+C:\Users\Angel\Downloads\Segundo Parcial (1)\Segundo Parcial\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.Clientes.frmClientesBuscar.resources
+C:\Users\Angel\Downloads\Segundo Parcial (1)\Segundo Parcial\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.Clientes.frmClientesEditar.resources
+C:\Users\Angel\Downloads\Segundo Parcial (1)\Segundo Parcial\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.Clientes.frmClientesEliminar.resources
+C:\Users\Angel\Downloads\Segundo Parcial (1)\Segundo Parcial\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.Clientes.frmClientesRegistros.resources
+C:\Users\Angel\Downloads\Segundo Parcial (1)\Segundo Parcial\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.Empleados.frmEmpleados.resources
+C:\Users\Angel\Downloads\Segundo Parcial (1)\Segundo Parcial\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.Empleados.frmEmpleadosBuscar.resources
+C:\Users\Angel\Downloads\Segundo Parcial (1)\Segundo Parcial\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.Empleados.frmEmpleadosEditar.resources
+C:\Users\Angel\Downloads\Segundo Parcial (1)\Segundo Parcial\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.Empleados.frmEmpleadosEliminar.resources
+C:\Users\Angel\Downloads\Segundo Parcial (1)\Segundo Parcial\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.frmAdministrador.resources
+C:\Users\Angel\Downloads\Segundo Parcial (1)\Segundo Parcial\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.frmEmpleado.resources
+C:\Users\Angel\Downloads\Segundo Parcial (1)\Segundo Parcial\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.Login.frmCarga.resources
+C:\Users\Angel\Downloads\Segundo Parcial (1)\Segundo Parcial\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.Login.frmLogin.resources
+C:\Users\Angel\Downloads\Segundo Parcial (1)\Segundo Parcial\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.Login.frmLoginEmpleado.resources
+C:\Users\Angel\Downloads\Segundo Parcial (1)\Segundo Parcial\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.Login.frmRegistro.resources
+C:\Users\Angel\Downloads\Segundo Parcial (1)\Segundo Parcial\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.Productos.frmProductos.resources
+C:\Users\Angel\Downloads\Segundo Parcial (1)\Segundo Parcial\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.Productos.frmProductosBuscar.resources
+C:\Users\Angel\Downloads\Segundo Parcial (1)\Segundo Parcial\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.Productos.frmProductosEditar.resources
+C:\Users\Angel\Downloads\Segundo Parcial (1)\Segundo Parcial\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.Productos.frmProductosEliminar.resources
+C:\Users\Angel\Downloads\Segundo Parcial (1)\Segundo Parcial\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.Productos.frmProductosRegistrar.resources
+C:\Users\Angel\Downloads\Segundo Parcial (1)\Segundo Parcial\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.Properties.Resources.resources
+C:\Users\Angel\Downloads\Segundo Parcial (1)\Segundo Parcial\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.Reportes.frmReportes.resources
+C:\Users\Angel\Downloads\Segundo Parcial (1)\Segundo Parcial\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.Ventas.frmVentas.resources
+C:\Users\Angel\Downloads\Segundo Parcial (1)\Segundo Parcial\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.Ventas.frmVentasBuscar.resources
+C:\Users\Angel\Downloads\Segundo Parcial (1)\Segundo Parcial\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.Ventas.frmVentasEditar.resources
+C:\Users\Angel\Downloads\Segundo Parcial (1)\Segundo Parcial\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.Ventas.frmVentasEliminar.resources
+C:\Users\Angel\Downloads\Segundo Parcial (1)\Segundo Parcial\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.Ventas.frmVentasVender.resources
+C:\Users\Angel\Downloads\Segundo Parcial (1)\Segundo Parcial\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.csproj.GenerateResource.cache
+C:\Users\Angel\Downloads\Segundo Parcial (1)\Segundo Parcial\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.csproj.CoreCompileInputs.cache
+C:\Users\Angel\Downloads\Segundo Parcial (1)\Segundo Parcial\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.exe
+C:\Users\Angel\Downloads\Segundo Parcial (1)\Segundo Parcial\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.pdb
+C:\Users\Angel\Downloads\Segundo Parcial (1)\Segundo Parcial\WinAppProyectoVerduras\WinAppProyectoVerduras\bin\Debug\WinAppProyectoVerduras.exe.config
+C:\Users\Angel\Downloads\Segundo Parcial (1)\Segundo Parcial\WinAppProyectoVerduras\WinAppProyectoVerduras\bin\Debug\WinAppProyectoVerduras.exe
+C:\Users\Angel\Downloads\Segundo Parcial (1)\Segundo Parcial\WinAppProyectoVerduras\WinAppProyectoVerduras\bin\Debug\WinAppProyectoVerduras.pdb
+C:\Users\rodrigo\Desktop\Angel\Prueba 2\WinAppProyectoVerduras\WinAppProyectoVerduras\bin\Debug\WinAppProyectoVerduras.exe.config
+C:\Users\rodrigo\Desktop\Angel\Prueba 2\WinAppProyectoVerduras\WinAppProyectoVerduras\bin\Debug\WinAppProyectoVerduras.exe
+C:\Users\rodrigo\Desktop\Angel\Prueba 2\WinAppProyectoVerduras\WinAppProyectoVerduras\bin\Debug\WinAppProyectoVerduras.pdb
+C:\Users\rodrigo\Desktop\Angel\Prueba 2\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.csproj.AssemblyReference.cache
+C:\Users\rodrigo\Desktop\Angel\Prueba 2\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.Clases.RJComboBox.resources
+C:\Users\rodrigo\Desktop\Angel\Prueba 2\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.Clases.TextBox.resources
+C:\Users\rodrigo\Desktop\Angel\Prueba 2\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.Clientes.frmClientes.resources
+C:\Users\rodrigo\Desktop\Angel\Prueba 2\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.Clientes.frmClientesBuscar.resources
+C:\Users\rodrigo\Desktop\Angel\Prueba 2\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.Clientes.frmClientesEditar.resources
+C:\Users\rodrigo\Desktop\Angel\Prueba 2\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.Clientes.frmClientesEliminar.resources
+C:\Users\rodrigo\Desktop\Angel\Prueba 2\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.Clientes.frmClientesRegistros.resources
+C:\Users\rodrigo\Desktop\Angel\Prueba 2\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.Empleados.frmEmpleados.resources
+C:\Users\rodrigo\Desktop\Angel\Prueba 2\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.Empleados.frmEmpleadosBuscar.resources
+C:\Users\rodrigo\Desktop\Angel\Prueba 2\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.Empleados.frmEmpleadosEditar.resources
+C:\Users\rodrigo\Desktop\Angel\Prueba 2\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.Empleados.frmEmpleadosEliminar.resources
+C:\Users\rodrigo\Desktop\Angel\Prueba 2\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.frmAdministrador.resources
+C:\Users\rodrigo\Desktop\Angel\Prueba 2\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.frmEmpleado.resources
+C:\Users\rodrigo\Desktop\Angel\Prueba 2\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.Login.frmCarga.resources
+C:\Users\rodrigo\Desktop\Angel\Prueba 2\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.Login.frmLogin.resources
+C:\Users\rodrigo\Desktop\Angel\Prueba 2\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.Login.frmLoginEmpleado.resources
+C:\Users\rodrigo\Desktop\Angel\Prueba 2\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.Login.frmRegistro.resources
+C:\Users\rodrigo\Desktop\Angel\Prueba 2\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.Productos.frmProductos.resources
+C:\Users\rodrigo\Desktop\Angel\Prueba 2\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.Productos.frmProductosBuscar.resources
+C:\Users\rodrigo\Desktop\Angel\Prueba 2\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.Productos.frmProductosEditar.resources
+C:\Users\rodrigo\Desktop\Angel\Prueba 2\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.Productos.frmProductosEliminar.resources
+C:\Users\rodrigo\Desktop\Angel\Prueba 2\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.Productos.frmProductosRegistrar.resources
+C:\Users\rodrigo\Desktop\Angel\Prueba 2\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.Properties.Resources.resources
+C:\Users\rodrigo\Desktop\Angel\Prueba 2\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.Reportes.frmReportes.resources
+C:\Users\rodrigo\Desktop\Angel\Prueba 2\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.Ventas.frmVentas.resources
+C:\Users\rodrigo\Desktop\Angel\Prueba 2\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.Ventas.frmVentasBuscar.resources
+C:\Users\rodrigo\Desktop\Angel\Prueba 2\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.Ventas.frmVentasEditar.resources
+C:\Users\rodrigo\Desktop\Angel\Prueba 2\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.Ventas.frmVentasEliminar.resources
+C:\Users\rodrigo\Desktop\Angel\Prueba 2\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.Ventas.frmVentasVender.resources
+C:\Users\rodrigo\Desktop\Angel\Prueba 2\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.csproj.GenerateResource.cache
+C:\Users\rodrigo\Desktop\Angel\Prueba 2\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.csproj.CoreCompileInputs.cache
+C:\Users\rodrigo\Desktop\Angel\Prueba 2\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.exe
+C:\Users\rodrigo\Desktop\Angel\Prueba 2\WinAppProyectoVerduras\WinAppProyectoVerduras\obj\Debug\WinAppProyectoVerduras.pdb
