@@ -17,6 +17,12 @@ namespace WinAppProyectoVerduras.Clientes
         Clases.ValidarClienteCam validarCampos = new Clases.ValidarClienteCam();
         Clases.Correo ValidadCorreo = new Clases.Correo();
         public string cedula, nombre, apellido, correo, direccion, telefono, descripcion;
+        object[] vec = new object[7];
+
+        public frmClientesRegistros()
+        {
+            InitializeComponent();
+        }
 
         private void TxtDireccion_KeyPress(object sender, KeyPressEventArgs e)
         {
@@ -227,26 +233,33 @@ namespace WinAppProyectoVerduras.Clientes
             }
         }
 
-        public frmClientesRegistros()
-        {
-            InitializeComponent();
-        }
-
+     
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            object[] vec = new object[8];
-            vec[0] = "4";
-            vec[1] = cedula;
-            vec[2] = nombre;
-            vec[3] = apellido;
-            vec[4] = telefono;
-            vec[5] = direccion;
-            vec[6] = correo;
-            vec[7] = descripcion;
+            vec[0] = cedula;
+            vec[1] = nombre;
+            vec[2] = apellido;
+            vec[3] = telefono;
+            vec[4] = direccion;
+            vec[5] = correo;
+            vec[6] = descripcion;
             clientes.guardarCliente(vec);
-            MessageBox.Show("El cliente se registro correctamente", "Registro", MessageBoxButtons.OK);
+            MessageBox.Show("El cliente se registro correctamente");
             limpiarCuadroTexto();
+            limpiarVariable();
+            
 
+        }
+
+        public void limpiarVariable()
+        {
+            cedula = "";
+            nombre = "";
+            apellido = "";
+            direccion = "";
+            telefono = "";
+            correo = "";
+            descripcion = "";
         }
 
         public void limpiarCuadroTexto()

@@ -176,30 +176,28 @@ namespace WinAppProyectoVerduras
             return exise;
         }
 
-        public void cargardatos()
-        {
-            if (ValidadExisteArchivo())
-            {
-                this.clientes.ReadXml("e:\\clientes.xml");
-            }
-        }
-
+        
         public void guardarCliente(object[] cliente)
         {
             if(ValidadExisteArchivo())
             {
+                this.clientes.Clear();
                 this.clientes.ReadXml("e:\\clientes.xml");
             }
             clientes.Rows.Add(cliente);
-            clientes.WriteXml("e:\\clientes.xml");
-            System.Console.WriteLine("Guardado Automaticamente");
-           
+            clientes.WriteXml("e:\\clientes.xml");          
 
         }
 
         public DataSet1.ClienteDataTable getClientesAll()
         {
-            this.clientes.ReadXml("e:\\clientes.xml");
+                     
+            if (ValidadExisteArchivo())
+            {
+                this.clientes.Clear();
+                this.clientes.ReadXml("e:\\clientes.xml");
+            }
+
             return clientes;
         }
 
@@ -208,11 +206,30 @@ namespace WinAppProyectoVerduras
             clientes.Rows.Add(producto);
             clientes.WriteXml("e:\\productos.xml");
 
+
         }
 
-        public object getClienteId(int productosId)
+        public object[] getClienteId(string cedula)
         {
-            object[] cliente = new object[5];
+            object[] cliente = new object[8];
+            if (ValidadExisteArchivo())
+            {
+                this.clientes.Clear();
+                clientes.ReadXml("e:\\clientes.xml");
+                System.Data.DataRow[] vect;
+                vect = clientes.Select("cedula ='" + cedula + "'");
+                if (vect.Length > 0)
+                {
+                    cliente[0] = vect[0]["cedula"].ToString();
+                    cliente[1] = vect[0]["nombre"].ToString();
+                    cliente[2] = vect[0]["apellido"].ToString();
+                    cliente[3] = vect[0]["telefono"].ToString();
+                    cliente[4] = vect[0]["direccion"].ToString();
+                    cliente[5] = vect[0]["correo"].ToString();
+                    cliente[6] = vect[0]["descripcion"].ToString();
+                }
+            }
+
             return cliente;
         }
 

@@ -41,11 +41,6 @@ namespace WinAppProyectoVerduras.Clientes
             this.lblCliente = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.lblEmpleadosRegistrados = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.dataSet1 = new WinAppProyectoVerduras.DataSet1();
-            this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cedulaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nombreDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.apellidoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -53,12 +48,18 @@ namespace WinAppProyectoVerduras.Clientes
             this.direccionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.correoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.descripcionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet1 = new WinAppProyectoVerduras.DataSet1();
+            this.lblEmpleadosRegistrados = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.clienteBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.pnlCabecera.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.pnlContenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlCabecera
@@ -197,7 +198,6 @@ namespace WinAppProyectoVerduras.Clientes
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn,
             this.cedulaDataGridViewTextBoxColumn,
             this.nombreDataGridViewTextBoxColumn,
             this.apellidoDataGridViewTextBoxColumn,
@@ -205,48 +205,11 @@ namespace WinAppProyectoVerduras.Clientes
             this.direccionDataGridViewTextBoxColumn,
             this.correoDataGridViewTextBoxColumn,
             this.descripcionDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.clienteBindingSource;
+            this.dataGridView1.DataSource = this.clienteBindingSource1;
             this.dataGridView1.Location = new System.Drawing.Point(76, 76);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(556, 248);
             this.dataGridView1.TabIndex = 13;
-            // 
-            // lblEmpleadosRegistrados
-            // 
-            this.lblEmpleadosRegistrados.AutoSize = true;
-            this.lblEmpleadosRegistrados.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblEmpleadosRegistrados.Location = new System.Drawing.Point(366, 34);
-            this.lblEmpleadosRegistrados.Name = "lblEmpleadosRegistrados";
-            this.lblEmpleadosRegistrados.Size = new System.Drawing.Size(65, 20);
-            this.lblEmpleadosRegistrados.TabIndex = 12;
-            this.lblEmpleadosRegistrados.Text = "Numero";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
-            this.label2.Location = new System.Drawing.Point(100, 33);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(263, 20);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "Numero de clientes registrados:";
-            // 
-            // dataSet1
-            // 
-            this.dataSet1.DataSetName = "DataSet1";
-            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // clienteBindingSource
-            // 
-            this.clienteBindingSource.DataMember = "Cliente";
-            this.clienteBindingSource.DataSource = this.dataSet1;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
             // 
             // cedulaDataGridViewTextBoxColumn
             // 
@@ -290,6 +253,42 @@ namespace WinAppProyectoVerduras.Clientes
             this.descripcionDataGridViewTextBoxColumn.HeaderText = "descripcion";
             this.descripcionDataGridViewTextBoxColumn.Name = "descripcionDataGridViewTextBoxColumn";
             // 
+            // clienteBindingSource
+            // 
+            this.clienteBindingSource.DataMember = "Cliente";
+            this.clienteBindingSource.DataSource = this.dataSet1;
+            // 
+            // dataSet1
+            // 
+            this.dataSet1.DataSetName = "DataSet1";
+            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // lblEmpleadosRegistrados
+            // 
+            this.lblEmpleadosRegistrados.AutoSize = true;
+            this.lblEmpleadosRegistrados.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblEmpleadosRegistrados.Location = new System.Drawing.Point(366, 34);
+            this.lblEmpleadosRegistrados.Name = "lblEmpleadosRegistrados";
+            this.lblEmpleadosRegistrados.Size = new System.Drawing.Size(65, 20);
+            this.lblEmpleadosRegistrados.TabIndex = 12;
+            this.lblEmpleadosRegistrados.Text = "Numero";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.label2.Location = new System.Drawing.Point(100, 33);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(263, 20);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Numero de clientes registrados:";
+            // 
+            // clienteBindingSource1
+            // 
+            this.clienteBindingSource1.DataMember = "Cliente";
+            this.clienteBindingSource1.DataSource = this.dataSet1;
+            // 
             // frmClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -306,8 +305,9 @@ namespace WinAppProyectoVerduras.Clientes
             this.pnlContenedor.ResumeLayout(false);
             this.pnlContenedor.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clienteBindingSource1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -337,5 +337,6 @@ namespace WinAppProyectoVerduras.Clientes
         private System.Windows.Forms.DataGridViewTextBoxColumn descripcionDataGridViewTextBoxColumn;
         private System.Windows.Forms.BindingSource clienteBindingSource;
         private DataSet1 dataSet1;
+        private System.Windows.Forms.BindingSource clienteBindingSource1;
     }
 }

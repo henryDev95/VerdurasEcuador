@@ -62,7 +62,7 @@ namespace WinAppProyectoVerduras.Clientes
         private void button1_Click(object sender, EventArgs e)
         {
             AbrirFormulariosHijos(new frmClientesRegistros());
-            dataGridView1.Refresh();
+         
         }
 
         private void pnlContenedor_Paint(object sender, PaintEventArgs e)

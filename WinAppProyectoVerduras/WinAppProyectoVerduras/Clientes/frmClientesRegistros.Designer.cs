@@ -67,7 +67,6 @@ namespace WinAppProyectoVerduras.Clientes
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.panel1.SuspendLayout();
-            this.pnContlogin.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
@@ -216,7 +215,10 @@ namespace WinAppProyectoVerduras.Clientes
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Controls.Add(this.pnContlogin);
+            this.panel1.Controls.Add(this.btnRegistrar);
+            this.panel1.Controls.Add(this.lklRegresar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel1.Location = new System.Drawing.Point(305, 0);
             this.panel1.Name = "panel1";
@@ -225,10 +227,9 @@ namespace WinAppProyectoVerduras.Clientes
             // 
             // pnContlogin
             // 
-            this.pnContlogin.Controls.Add(this.groupBox1);
             this.pnContlogin.Location = new System.Drawing.Point(39, 28);
             this.pnContlogin.Name = "pnContlogin";
-            this.pnContlogin.Size = new System.Drawing.Size(228, 257);
+            this.pnContlogin.Size = new System.Drawing.Size(228, 232);
             this.pnContlogin.TabIndex = 0;
             // 
             // groupBox1
@@ -244,10 +245,8 @@ namespace WinAppProyectoVerduras.Clientes
             this.groupBox1.Controls.Add(this.TxtDescripcion);
             this.groupBox1.Controls.Add(this.TxtCorreo);
             this.groupBox1.Controls.Add(this.pictureBox6);
-            this.groupBox1.Controls.Add(this.lklRegresar);
-            this.groupBox1.Controls.Add(this.btnRegistrar);
             this.groupBox1.Controls.Add(this.pictureBox5);
-            this.groupBox1.Location = new System.Drawing.Point(0, 0);
+            this.groupBox1.Location = new System.Drawing.Point(39, 3);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(228, 257);
             this.groupBox1.TabIndex = 1;
@@ -258,7 +257,7 @@ namespace WinAppProyectoVerduras.Clientes
             this.label8.AutoSize = true;
             this.label8.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(3, 176);
+            this.label8.Location = new System.Drawing.Point(0, 191);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(66, 13);
             this.label8.TabIndex = 42;
@@ -269,7 +268,7 @@ namespace WinAppProyectoVerduras.Clientes
             this.label7.AutoSize = true;
             this.label7.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(3, 127);
+            this.label7.Location = new System.Drawing.Point(3, 135);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(97, 13);
             this.label7.TabIndex = 41;
@@ -280,7 +279,7 @@ namespace WinAppProyectoVerduras.Clientes
             this.label6.AutoSize = true;
             this.label6.BackColor = System.Drawing.Color.MediumSlateBlue;
             this.label6.ForeColor = System.Drawing.Color.Black;
-            this.label6.Location = new System.Drawing.Point(3, 68);
+            this.label6.Location = new System.Drawing.Point(3, 79);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(52, 13);
             this.label6.TabIndex = 40;
@@ -309,7 +308,7 @@ namespace WinAppProyectoVerduras.Clientes
             // 
             // TxtTelefono
             // 
-            this.TxtTelefono.Location = new System.Drawing.Point(42, 95);
+            this.TxtTelefono.Location = new System.Drawing.Point(42, 103);
             this.TxtTelefono.Name = "TxtTelefono";
             this.TxtTelefono.Size = new System.Drawing.Size(170, 20);
             this.TxtTelefono.TabIndex = 37;
@@ -326,7 +325,7 @@ namespace WinAppProyectoVerduras.Clientes
             // pictureBox7
             // 
             this.pictureBox7.Image = global::WinAppProyectoVerduras.Properties.Resources.icons8_description_64;
-            this.pictureBox7.Location = new System.Drawing.Point(3, 192);
+            this.pictureBox7.Location = new System.Drawing.Point(3, 207);
             this.pictureBox7.Name = "pictureBox7";
             this.pictureBox7.Size = new System.Drawing.Size(28, 28);
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -335,7 +334,7 @@ namespace WinAppProyectoVerduras.Clientes
             // 
             // TxtDescripcion
             // 
-            this.TxtDescripcion.Location = new System.Drawing.Point(42, 200);
+            this.TxtDescripcion.Location = new System.Drawing.Point(40, 215);
             this.TxtDescripcion.Name = "TxtDescripcion";
             this.TxtDescripcion.Size = new System.Drawing.Size(170, 20);
             this.TxtDescripcion.TabIndex = 31;
@@ -343,7 +342,7 @@ namespace WinAppProyectoVerduras.Clientes
             // 
             // TxtCorreo
             // 
-            this.TxtCorreo.Location = new System.Drawing.Point(42, 151);
+            this.TxtCorreo.Location = new System.Drawing.Point(42, 159);
             this.TxtCorreo.Name = "TxtCorreo";
             this.TxtCorreo.Size = new System.Drawing.Size(170, 20);
             this.TxtCorreo.TabIndex = 30;
@@ -352,7 +351,7 @@ namespace WinAppProyectoVerduras.Clientes
             // pictureBox6
             // 
             this.pictureBox6.Image = global::WinAppProyectoVerduras.Properties.Resources.Correo;
-            this.pictureBox6.Location = new System.Drawing.Point(6, 143);
+            this.pictureBox6.Location = new System.Drawing.Point(6, 151);
             this.pictureBox6.Name = "pictureBox6";
             this.pictureBox6.Size = new System.Drawing.Size(28, 28);
             this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
@@ -364,7 +363,7 @@ namespace WinAppProyectoVerduras.Clientes
             this.lklRegresar.AutoSize = true;
             this.lklRegresar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lklRegresar.LinkColor = System.Drawing.Color.White;
-            this.lklRegresar.Location = new System.Drawing.Point(132, 235);
+            this.lklRegresar.Location = new System.Drawing.Point(171, 278);
             this.lklRegresar.Name = "lklRegresar";
             this.lklRegresar.Size = new System.Drawing.Size(62, 16);
             this.lklRegresar.TabIndex = 6;
@@ -385,9 +384,9 @@ namespace WinAppProyectoVerduras.Clientes
             this.btnRegistrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegistrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegistrar.ForeColor = System.Drawing.Color.White;
-            this.btnRegistrar.Location = new System.Drawing.Point(9, 226);
+            this.btnRegistrar.Location = new System.Drawing.Point(38, 266);
             this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(101, 25);
+            this.btnRegistrar.Size = new System.Drawing.Size(101, 41);
             this.btnRegistrar.TabIndex = 2;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.TextColor = System.Drawing.Color.White;
@@ -397,7 +396,7 @@ namespace WinAppProyectoVerduras.Clientes
             // pictureBox5
             // 
             this.pictureBox5.Image = global::WinAppProyectoVerduras.Properties.Resources.icons8_office_phone_50_1_;
-            this.pictureBox5.Location = new System.Drawing.Point(8, 87);
+            this.pictureBox5.Location = new System.Drawing.Point(6, 95);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(28, 28);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -422,7 +421,7 @@ namespace WinAppProyectoVerduras.Clientes
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel1.ResumeLayout(false);
-            this.pnContlogin.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
