@@ -48,8 +48,13 @@ namespace WinAppProyectoVerduras.Login
 
         private void btnIngresar_Click(object sender, EventArgs e)
         {
+
+          
+
+          
             frmAdministrador objPrincipal = new frmAdministrador();
             objPrincipal.Show();
+        
         }
 
         
@@ -72,15 +77,7 @@ namespace WinAppProyectoVerduras.Login
             } 
         }
 
-       
-
-        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar == Convert.ToChar(Keys.Enter))
-            {
-                txtContraseña.Focus();
-            }
-        }
+              
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
@@ -105,8 +102,8 @@ namespace WinAppProyectoVerduras.Login
             if (textCorreo.Texts == "Correo Electrónico")
             {
                 textCorreo.Texts = "";
-                
             }
+            
         }
 
         private void pnlContenedor_Paint(object sender, PaintEventArgs e)
@@ -134,5 +131,7 @@ namespace WinAppProyectoVerduras.Login
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
+
+       
     }
 }

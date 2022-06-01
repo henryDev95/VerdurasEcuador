@@ -34,41 +34,40 @@ namespace WinAppProyectoVerduras.Login
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnContlogin = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.texBxConfirmarContra = new WinAppProyectoVerduras.Clases.TextBox();
+            this.TxtConfimarContra = new System.Windows.Forms.TextBox();
+            this.TxtContraseña = new System.Windows.Forms.TextBox();
+            this.TxtCorreo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.botonImagen = new WinAppProyectoVerduras.Clases.Botones();
-            this.pbxFotoPerfil = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.txtContraseña = new WinAppProyectoVerduras.Clases.TextBox();
-            this.txtCorreo = new WinAppProyectoVerduras.Clases.TextBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.btnRegistrar = new WinAppProyectoVerduras.Clases.Botones();
             this.lklRegresar = new System.Windows.Forms.LinkLabel();
             this.label1 = new System.Windows.Forms.Label();
             this.pnlContRegistro = new System.Windows.Forms.Panel();
-            this.txtCedula = new WinAppProyectoVerduras.Clases.TextBox();
+            this.TxtTelefono = new System.Windows.Forms.TextBox();
+            this.TxtDireccion = new System.Windows.Forms.TextBox();
+            this.TxtApellido = new System.Windows.Forms.TextBox();
+            this.TxtNombre = new System.Windows.Forms.TextBox();
+            this.txtCedula = new System.Windows.Forms.TextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.txtNombre = new WinAppProyectoVerduras.Clases.TextBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.txtApellido = new WinAppProyectoVerduras.Clases.TextBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.comboBoxGenero = new System.Windows.Forms.ComboBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.textTelefono = new WinAppProyectoVerduras.Clases.TextBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.txtDireccion = new WinAppProyectoVerduras.Clases.TextBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.comboBoxRol = new System.Windows.Forms.ComboBox();
             this.pnlContenedor = new System.Windows.Forms.Panel();
             this.panelBarra = new System.Windows.Forms.Panel();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.pbxFotoPerfil = new System.Windows.Forms.PictureBox();
             this.pnlDelantero.SuspendLayout();
             this.panel1.SuspendLayout();
             this.pnContlogin.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxFotoPerfil)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -81,6 +80,7 @@ namespace WinAppProyectoVerduras.Login
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.pnlContenedor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxFotoPerfil)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlDelantero
@@ -104,9 +104,9 @@ namespace WinAppProyectoVerduras.Login
             this.panel1.Controls.Add(this.btnRegistrar);
             this.panel1.Controls.Add(this.lklRegresar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(376, 0);
+            this.panel1.Location = new System.Drawing.Point(358, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(304, 453);
+            this.panel1.Size = new System.Drawing.Size(322, 453);
             this.panel1.TabIndex = 0;
             // 
             // pnContlogin
@@ -119,13 +119,13 @@ namespace WinAppProyectoVerduras.Login
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.texBxConfirmarContra);
+            this.groupBox1.Controls.Add(this.TxtConfimarContra);
+            this.groupBox1.Controls.Add(this.TxtContraseña);
+            this.groupBox1.Controls.Add(this.TxtCorreo);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.botonImagen);
             this.groupBox1.Controls.Add(this.pbxFotoPerfil);
             this.groupBox1.Controls.Add(this.pictureBox7);
-            this.groupBox1.Controls.Add(this.txtContraseña);
-            this.groupBox1.Controls.Add(this.txtCorreo);
             this.groupBox1.Controls.Add(this.pictureBox9);
             this.groupBox1.Controls.Add(this.pictureBox6);
             this.groupBox1.Location = new System.Drawing.Point(0, 0);
@@ -134,30 +134,29 @@ namespace WinAppProyectoVerduras.Login
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             // 
-            // texBxConfirmarContra
+            // TxtConfimarContra
             // 
-            this.texBxConfirmarContra.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.texBxConfirmarContra.BackColor = System.Drawing.Color.White;
-            this.texBxConfirmarContra.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.texBxConfirmarContra.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.texBxConfirmarContra.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.texBxConfirmarContra.BorderRadius = 10;
-            this.texBxConfirmarContra.BorderSize = 2;
-            this.texBxConfirmarContra.Location = new System.Drawing.Point(46, 223);
-            this.texBxConfirmarContra.Margin = new System.Windows.Forms.Padding(4);
-            this.texBxConfirmarContra.Multiline = false;
-            this.texBxConfirmarContra.Name = "texBxConfirmarContra";
-            this.texBxConfirmarContra.Padding = new System.Windows.Forms.Padding(7);
-            this.texBxConfirmarContra.PasswordChar = false;
-            this.texBxConfirmarContra.PlaceholderColor = System.Drawing.Color.White;
-            this.texBxConfirmarContra.PlaceholderText = "";
-            this.texBxConfirmarContra.Size = new System.Drawing.Size(175, 28);
-            this.texBxConfirmarContra.TabIndex = 22;
-            this.texBxConfirmarContra.Texts = "ConfirmarContra";
-            this.texBxConfirmarContra.UnderlinedStyle = false;
-            this.texBxConfirmarContra.Enter += new System.EventHandler(this.texBxConfirmarContra_Enter);
-            this.texBxConfirmarContra.Leave += new System.EventHandler(this.texBxConfirmarContra_Leave);
+            this.TxtConfimarContra.Location = new System.Drawing.Point(45, 230);
+            this.TxtConfimarContra.Name = "TxtConfimarContra";
+            this.TxtConfimarContra.Size = new System.Drawing.Size(175, 20);
+            this.TxtConfimarContra.TabIndex = 30;
+            this.TxtConfimarContra.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtConfimarContra_KeyPress);
+            // 
+            // TxtContraseña
+            // 
+            this.TxtContraseña.Location = new System.Drawing.Point(45, 187);
+            this.TxtContraseña.Name = "TxtContraseña";
+            this.TxtContraseña.Size = new System.Drawing.Size(175, 20);
+            this.TxtContraseña.TabIndex = 29;
+            this.TxtContraseña.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtContraseña_KeyPress);
+            // 
+            // TxtCorreo
+            // 
+            this.TxtCorreo.Location = new System.Drawing.Point(45, 143);
+            this.TxtCorreo.Name = "TxtCorreo";
+            this.TxtCorreo.Size = new System.Drawing.Size(175, 20);
+            this.TxtCorreo.TabIndex = 28;
+            this.TxtCorreo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtCorreo_KeyPress);
             // 
             // label2
             // 
@@ -193,15 +192,6 @@ namespace WinAppProyectoVerduras.Login
             this.botonImagen.UseVisualStyleBackColor = false;
             this.botonImagen.Click += new System.EventHandler(this.botonImagen_Click);
             // 
-            // pbxFotoPerfil
-            // 
-            this.pbxFotoPerfil.BackColor = System.Drawing.Color.GhostWhite;
-            this.pbxFotoPerfil.Location = new System.Drawing.Point(20, 42);
-            this.pbxFotoPerfil.Name = "pbxFotoPerfil";
-            this.pbxFotoPerfil.Size = new System.Drawing.Size(93, 66);
-            this.pbxFotoPerfil.TabIndex = 7;
-            this.pbxFotoPerfil.TabStop = false;
-            // 
             // pictureBox7
             // 
             this.pictureBox7.Image = global::WinAppProyectoVerduras.Properties.Resources.Contraseña___One;
@@ -211,56 +201,6 @@ namespace WinAppProyectoVerduras.Login
             this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox7.TabIndex = 20;
             this.pictureBox7.TabStop = false;
-            // 
-            // txtContraseña
-            // 
-            this.txtContraseña.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtContraseña.BackColor = System.Drawing.Color.White;
-            this.txtContraseña.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.txtContraseña.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.txtContraseña.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.txtContraseña.BorderRadius = 10;
-            this.txtContraseña.BorderSize = 2;
-            this.txtContraseña.Location = new System.Drawing.Point(46, 179);
-            this.txtContraseña.Margin = new System.Windows.Forms.Padding(4);
-            this.txtContraseña.Multiline = false;
-            this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.Padding = new System.Windows.Forms.Padding(7);
-            this.txtContraseña.PasswordChar = false;
-            this.txtContraseña.PlaceholderColor = System.Drawing.Color.White;
-            this.txtContraseña.PlaceholderText = "";
-            this.txtContraseña.Size = new System.Drawing.Size(175, 28);
-            this.txtContraseña.TabIndex = 5;
-            this.txtContraseña.Texts = "Contraseña";
-            this.txtContraseña.UnderlinedStyle = false;
-            this.txtContraseña.Enter += new System.EventHandler(this.txtContraseña_Enter);
-            this.txtContraseña.Leave += new System.EventHandler(this.txtContraseña_Leave);
-            // 
-            // txtCorreo
-            // 
-            this.txtCorreo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCorreo.BackColor = System.Drawing.Color.White;
-            this.txtCorreo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.txtCorreo.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.txtCorreo.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.txtCorreo.BorderRadius = 10;
-            this.txtCorreo.BorderSize = 2;
-            this.txtCorreo.Location = new System.Drawing.Point(45, 135);
-            this.txtCorreo.Margin = new System.Windows.Forms.Padding(4);
-            this.txtCorreo.Multiline = false;
-            this.txtCorreo.Name = "txtCorreo";
-            this.txtCorreo.Padding = new System.Windows.Forms.Padding(7);
-            this.txtCorreo.PasswordChar = false;
-            this.txtCorreo.PlaceholderColor = System.Drawing.Color.White;
-            this.txtCorreo.PlaceholderText = "";
-            this.txtCorreo.Size = new System.Drawing.Size(179, 28);
-            this.txtCorreo.TabIndex = 16;
-            this.txtCorreo.Texts = "Correo Electrónico";
-            this.txtCorreo.UnderlinedStyle = false;
-            this.txtCorreo.Enter += new System.EventHandler(this.txtCorreo_Enter);
-            this.txtCorreo.Leave += new System.EventHandler(this.txtCorreo_Leave);
             // 
             // pictureBox9
             // 
@@ -297,7 +237,7 @@ namespace WinAppProyectoVerduras.Login
             this.btnRegistrar.ForeColor = System.Drawing.Color.White;
             this.btnRegistrar.Location = new System.Drawing.Point(39, 327);
             this.btnRegistrar.Name = "btnRegistrar";
-            this.btnRegistrar.Size = new System.Drawing.Size(99, 48);
+            this.btnRegistrar.Size = new System.Drawing.Size(117, 48);
             this.btnRegistrar.TabIndex = 2;
             this.btnRegistrar.Text = "Registrar";
             this.btnRegistrar.TextColor = System.Drawing.Color.White;
@@ -330,49 +270,64 @@ namespace WinAppProyectoVerduras.Login
             // 
             // pnlContRegistro
             // 
+            this.pnlContRegistro.Controls.Add(this.TxtTelefono);
+            this.pnlContRegistro.Controls.Add(this.TxtDireccion);
+            this.pnlContRegistro.Controls.Add(this.TxtApellido);
+            this.pnlContRegistro.Controls.Add(this.TxtNombre);
             this.pnlContRegistro.Controls.Add(this.txtCedula);
             this.pnlContRegistro.Controls.Add(this.pictureBox1);
-            this.pnlContRegistro.Controls.Add(this.txtNombre);
             this.pnlContRegistro.Controls.Add(this.pictureBox2);
-            this.pnlContRegistro.Controls.Add(this.txtApellido);
             this.pnlContRegistro.Controls.Add(this.pictureBox3);
             this.pnlContRegistro.Controls.Add(this.pictureBox4);
             this.pnlContRegistro.Controls.Add(this.comboBoxGenero);
             this.pnlContRegistro.Controls.Add(this.pictureBox10);
-            this.pnlContRegistro.Controls.Add(this.textTelefono);
             this.pnlContRegistro.Controls.Add(this.pictureBox5);
-            this.pnlContRegistro.Controls.Add(this.txtDireccion);
             this.pnlContRegistro.Controls.Add(this.pictureBox8);
             this.pnlContRegistro.Controls.Add(this.comboBoxRol);
             this.pnlContRegistro.Location = new System.Drawing.Point(29, 28);
             this.pnlContRegistro.Name = "pnlContRegistro";
-            this.pnlContRegistro.Size = new System.Drawing.Size(309, 371);
+            this.pnlContRegistro.Size = new System.Drawing.Size(307, 371);
             this.pnlContRegistro.TabIndex = 7;
+            // 
+            // TxtTelefono
+            // 
+            this.TxtTelefono.Location = new System.Drawing.Point(48, 231);
+            this.TxtTelefono.Name = "TxtTelefono";
+            this.TxtTelefono.Size = new System.Drawing.Size(197, 20);
+            this.TxtTelefono.TabIndex = 27;
+            this.TxtTelefono.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtTelefono_KeyPress);
+            // 
+            // TxtDireccion
+            // 
+            this.TxtDireccion.Location = new System.Drawing.Point(48, 187);
+            this.TxtDireccion.Name = "TxtDireccion";
+            this.TxtDireccion.Size = new System.Drawing.Size(197, 20);
+            this.TxtDireccion.TabIndex = 26;
+            this.TxtDireccion.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtDireccion_KeyPress);
+            // 
+            // TxtApellido
+            // 
+            this.TxtApellido.Location = new System.Drawing.Point(48, 143);
+            this.TxtApellido.Name = "TxtApellido";
+            this.TxtApellido.Size = new System.Drawing.Size(197, 20);
+            this.TxtApellido.TabIndex = 25;
+            this.TxtApellido.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtApellido_KeyPress);
+            // 
+            // TxtNombre
+            // 
+            this.TxtNombre.Location = new System.Drawing.Point(47, 97);
+            this.TxtNombre.Name = "TxtNombre";
+            this.TxtNombre.Size = new System.Drawing.Size(197, 20);
+            this.TxtNombre.TabIndex = 24;
+            this.TxtNombre.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TxtNombre_KeyPress);
             // 
             // txtCedula
             // 
-            this.txtCedula.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtCedula.BackColor = System.Drawing.Color.White;
-            this.txtCedula.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.txtCedula.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.txtCedula.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.txtCedula.BorderRadius = 10;
-            this.txtCedula.BorderSize = 2;
-            this.txtCedula.Location = new System.Drawing.Point(48, 42);
-            this.txtCedula.Margin = new System.Windows.Forms.Padding(4);
-            this.txtCedula.Multiline = false;
+            this.txtCedula.Location = new System.Drawing.Point(47, 50);
             this.txtCedula.Name = "txtCedula";
-            this.txtCedula.Padding = new System.Windows.Forms.Padding(7);
-            this.txtCedula.PasswordChar = false;
-            this.txtCedula.PlaceholderColor = System.Drawing.Color.White;
-            this.txtCedula.PlaceholderText = "";
-            this.txtCedula.Size = new System.Drawing.Size(236, 28);
-            this.txtCedula.TabIndex = 6;
-            this.txtCedula.Texts = "Cédula";
-            this.txtCedula.UnderlinedStyle = false;
-            this.txtCedula.Enter += new System.EventHandler(this.txtCedula_Enter);
-            this.txtCedula.Leave += new System.EventHandler(this.txtCedula_Leave);
+            this.txtCedula.Size = new System.Drawing.Size(197, 20);
+            this.txtCedula.TabIndex = 23;
+            this.txtCedula.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtCedula_KeyPress);
             // 
             // pictureBox1
             // 
@@ -385,31 +340,6 @@ namespace WinAppProyectoVerduras.Login
             this.pictureBox1.TabIndex = 7;
             this.pictureBox1.TabStop = false;
             // 
-            // txtNombre
-            // 
-            this.txtNombre.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNombre.BackColor = System.Drawing.Color.White;
-            this.txtNombre.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.txtNombre.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.txtNombre.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.txtNombre.BorderRadius = 10;
-            this.txtNombre.BorderSize = 2;
-            this.txtNombre.Location = new System.Drawing.Point(48, 89);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
-            this.txtNombre.Multiline = false;
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Padding = new System.Windows.Forms.Padding(7);
-            this.txtNombre.PasswordChar = false;
-            this.txtNombre.PlaceholderColor = System.Drawing.Color.White;
-            this.txtNombre.PlaceholderText = "";
-            this.txtNombre.Size = new System.Drawing.Size(236, 28);
-            this.txtNombre.TabIndex = 8;
-            this.txtNombre.Texts = "Nombre";
-            this.txtNombre.UnderlinedStyle = false;
-            this.txtNombre.Enter += new System.EventHandler(this.txtNombre_Enter);
-            this.txtNombre.Leave += new System.EventHandler(this.txtNombre_Leave);
-            // 
             // pictureBox2
             // 
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
@@ -419,31 +349,6 @@ namespace WinAppProyectoVerduras.Login
             this.pictureBox2.Size = new System.Drawing.Size(28, 28);
             this.pictureBox2.TabIndex = 9;
             this.pictureBox2.TabStop = false;
-            // 
-            // txtApellido
-            // 
-            this.txtApellido.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtApellido.BackColor = System.Drawing.Color.White;
-            this.txtApellido.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.txtApellido.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.txtApellido.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.txtApellido.BorderRadius = 10;
-            this.txtApellido.BorderSize = 2;
-            this.txtApellido.Location = new System.Drawing.Point(48, 135);
-            this.txtApellido.Margin = new System.Windows.Forms.Padding(4);
-            this.txtApellido.Multiline = false;
-            this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Padding = new System.Windows.Forms.Padding(7);
-            this.txtApellido.PasswordChar = false;
-            this.txtApellido.PlaceholderColor = System.Drawing.Color.White;
-            this.txtApellido.PlaceholderText = "";
-            this.txtApellido.Size = new System.Drawing.Size(236, 28);
-            this.txtApellido.TabIndex = 10;
-            this.txtApellido.Texts = "Apellido";
-            this.txtApellido.UnderlinedStyle = false;
-            this.txtApellido.Enter += new System.EventHandler(this.txtApellido_Enter);
-            this.txtApellido.Leave += new System.EventHandler(this.txtApellido_Leave);
             // 
             // pictureBox3
             // 
@@ -487,31 +392,6 @@ namespace WinAppProyectoVerduras.Login
             this.pictureBox10.TabIndex = 21;
             this.pictureBox10.TabStop = false;
             // 
-            // textTelefono
-            // 
-            this.textTelefono.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.textTelefono.BackColor = System.Drawing.Color.White;
-            this.textTelefono.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.textTelefono.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.textTelefono.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.textTelefono.BorderRadius = 10;
-            this.textTelefono.BorderSize = 2;
-            this.textTelefono.Location = new System.Drawing.Point(47, 223);
-            this.textTelefono.Margin = new System.Windows.Forms.Padding(4);
-            this.textTelefono.Multiline = false;
-            this.textTelefono.Name = "textTelefono";
-            this.textTelefono.Padding = new System.Windows.Forms.Padding(7);
-            this.textTelefono.PasswordChar = false;
-            this.textTelefono.PlaceholderColor = System.Drawing.Color.White;
-            this.textTelefono.PlaceholderText = "";
-            this.textTelefono.Size = new System.Drawing.Size(236, 28);
-            this.textTelefono.TabIndex = 20;
-            this.textTelefono.Texts = "Telefono";
-            this.textTelefono.UnderlinedStyle = false;
-            this.textTelefono.Enter += new System.EventHandler(this.textTelefono_Enter);
-            this.textTelefono.Leave += new System.EventHandler(this.textTelefono_Leave);
-            // 
             // pictureBox5
             // 
             this.pictureBox5.Image = global::WinAppProyectoVerduras.Properties.Resources.icons8_office_phone_50_1_;
@@ -521,31 +401,6 @@ namespace WinAppProyectoVerduras.Login
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox5.TabIndex = 19;
             this.pictureBox5.TabStop = false;
-            // 
-            // txtDireccion
-            // 
-            this.txtDireccion.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtDireccion.BackColor = System.Drawing.Color.White;
-            this.txtDireccion.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.txtDireccion.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.txtDireccion.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
-            this.txtDireccion.BorderRadius = 10;
-            this.txtDireccion.BorderSize = 2;
-            this.txtDireccion.Location = new System.Drawing.Point(47, 179);
-            this.txtDireccion.Margin = new System.Windows.Forms.Padding(4);
-            this.txtDireccion.Multiline = false;
-            this.txtDireccion.Name = "txtDireccion";
-            this.txtDireccion.Padding = new System.Windows.Forms.Padding(7);
-            this.txtDireccion.PasswordChar = false;
-            this.txtDireccion.PlaceholderColor = System.Drawing.Color.White;
-            this.txtDireccion.PlaceholderText = "";
-            this.txtDireccion.Size = new System.Drawing.Size(236, 28);
-            this.txtDireccion.TabIndex = 12;
-            this.txtDireccion.Texts = "Dirección";
-            this.txtDireccion.UnderlinedStyle = false;
-            this.txtDireccion.Enter += new System.EventHandler(this.txtDireccion_Enter);
-            this.txtDireccion.Leave += new System.EventHandler(this.txtDireccion_Leave);
             // 
             // pictureBox8
             // 
@@ -593,6 +448,15 @@ namespace WinAppProyectoVerduras.Login
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // pbxFotoPerfil
+            // 
+            this.pbxFotoPerfil.BackColor = System.Drawing.Color.GhostWhite;
+            this.pbxFotoPerfil.Location = new System.Drawing.Point(20, 42);
+            this.pbxFotoPerfil.Name = "pbxFotoPerfil";
+            this.pbxFotoPerfil.Size = new System.Drawing.Size(93, 66);
+            this.pbxFotoPerfil.TabIndex = 7;
+            this.pbxFotoPerfil.TabStop = false;
+            // 
             // frmRegistro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -610,11 +474,11 @@ namespace WinAppProyectoVerduras.Login
             this.pnContlogin.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxFotoPerfil)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.pnlContRegistro.ResumeLayout(false);
+            this.pnlContRegistro.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
@@ -623,6 +487,7 @@ namespace WinAppProyectoVerduras.Login
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.pnlContenedor.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbxFotoPerfil)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -633,22 +498,15 @@ namespace WinAppProyectoVerduras.Login
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel pnContlogin;
         private System.Windows.Forms.LinkLabel lklRegresar;
-        private Clases.TextBox txtContraseña;
         private Clases.Botones btnRegistrar;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel pnlContenedor;
         private System.Windows.Forms.PictureBox pictureBox6;
-        private Clases.TextBox txtCorreo;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private Clases.TextBox txtDireccion;
         private System.Windows.Forms.PictureBox pictureBox3;
-        private Clases.TextBox txtApellido;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private Clases.TextBox txtNombre;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private Clases.TextBox txtCedula;
         private System.Windows.Forms.Panel pnlContRegistro;
-        private System.Windows.Forms.PictureBox pbxFotoPerfil;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.PictureBox pictureBox7;
@@ -657,11 +515,18 @@ namespace WinAppProyectoVerduras.Login
         private System.Windows.Forms.ComboBox comboBoxRol;
         private Clases.Botones botonImagen;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
-        private System.Windows.Forms.Panel panelBarra;
-        private Clases.TextBox textTelefono;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.ComboBox comboBoxGenero;
         private System.Windows.Forms.PictureBox pictureBox10;
-        private Clases.TextBox texBxConfirmarContra;
+        private System.Windows.Forms.TextBox TxtConfimarContra;
+        private System.Windows.Forms.TextBox TxtContraseña;
+        private System.Windows.Forms.TextBox TxtCorreo;
+        private System.Windows.Forms.TextBox TxtTelefono;
+        private System.Windows.Forms.TextBox TxtDireccion;
+        private System.Windows.Forms.TextBox TxtApellido;
+        private System.Windows.Forms.TextBox TxtNombre;
+        private System.Windows.Forms.TextBox txtCedula;
+        private System.Windows.Forms.Panel panelBarra;
+        private System.Windows.Forms.PictureBox pbxFotoPerfil;
     }
 }

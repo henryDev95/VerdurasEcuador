@@ -529,11 +529,7 @@ namespace WinAppProyectoVerduras {
             
             private global::System.Data.DataColumn columnestado;
             
-            private global::System.Data.DataColumn columncolor;
-            
-            private global::System.Data.DataColumn columncantidad;
-            
-            private global::System.Data.DataColumn columnmarca;
+            private global::System.Data.DataColumn columnstock;
             
             private global::System.Data.DataColumn columnprecio_compra;
             
@@ -644,25 +640,9 @@ namespace WinAppProyectoVerduras {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn colorColumn {
+            public global::System.Data.DataColumn stockColumn {
                 get {
-                    return this.columncolor;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn cantidadColumn {
-                get {
-                    return this.columncantidad;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn marcaColumn {
-                get {
-                    return this.columnmarca;
+                    return this.columnstock;
                 }
             }
             
@@ -711,7 +691,7 @@ namespace WinAppProyectoVerduras {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public ProductoRow AddProductoRow(string id, string nombre, string descripcion, string imagen, CategoriaRow parentCategoriaRowByFK_Categoria_Producto, string peso, string precio_venta, string proveedor, string estado, string color, string cantidad, string marca, string precio_compra) {
+            public ProductoRow AddProductoRow(string id, string nombre, string descripcion, string imagen, CategoriaRow parentCategoriaRowByFK_Categoria_Producto, string peso, string precio_venta, string proveedor, string estado, string stock, string precio_compra) {
                 ProductoRow rowProductoRow = ((ProductoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         id,
@@ -723,9 +703,7 @@ namespace WinAppProyectoVerduras {
                         precio_venta,
                         proveedor,
                         estado,
-                        color,
-                        cantidad,
-                        marca,
+                        stock,
                         precio_compra};
                 if ((parentCategoriaRowByFK_Categoria_Producto != null)) {
                     columnValuesArray[4] = parentCategoriaRowByFK_Categoria_Producto[0];
@@ -768,9 +746,7 @@ namespace WinAppProyectoVerduras {
                 this.columnprecio_venta = base.Columns["precio_venta"];
                 this.columnproveedor = base.Columns["proveedor"];
                 this.columnestado = base.Columns["estado"];
-                this.columncolor = base.Columns["color"];
-                this.columncantidad = base.Columns["cantidad"];
-                this.columnmarca = base.Columns["marca"];
+                this.columnstock = base.Columns["stock"];
                 this.columnprecio_compra = base.Columns["precio_compra"];
             }
             
@@ -795,12 +771,8 @@ namespace WinAppProyectoVerduras {
                 base.Columns.Add(this.columnproveedor);
                 this.columnestado = new global::System.Data.DataColumn("estado", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnestado);
-                this.columncolor = new global::System.Data.DataColumn("color", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncolor);
-                this.columncantidad = new global::System.Data.DataColumn("cantidad", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columncantidad);
-                this.columnmarca = new global::System.Data.DataColumn("marca", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnmarca);
+                this.columnstock = new global::System.Data.DataColumn("stock", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnstock);
                 this.columnprecio_compra = new global::System.Data.DataColumn("precio_compra", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnprecio_compra);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("ProductoKey1", new global::System.Data.DataColumn[] {
@@ -957,10 +929,6 @@ namespace WinAppProyectoVerduras {
             
             private global::System.Data.DataColumn columndescripcion;
             
-            private global::System.Data.DataColumn columnestado;
-            
-            private global::System.Data.DataColumn columngenero;
-            
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public ClienteDataTable() {
@@ -1060,22 +1028,6 @@ namespace WinAppProyectoVerduras {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn estadoColumn {
-                get {
-                    return this.columnestado;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn generoColumn {
-                get {
-                    return this.columngenero;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             [global::System.ComponentModel.Browsable(false)]
             public int Count {
                 get {
@@ -1111,7 +1063,7 @@ namespace WinAppProyectoVerduras {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public ClienteRow AddClienteRow(string id, string cedula, string nombre, string apellido, string telefono, string direccion, string correo, string descripcion, string estado, string genero) {
+            public ClienteRow AddClienteRow(string id, string cedula, string nombre, string apellido, string telefono, string direccion, string correo, string descripcion) {
                 ClienteRow rowClienteRow = ((ClienteRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         id,
@@ -1121,9 +1073,7 @@ namespace WinAppProyectoVerduras {
                         telefono,
                         direccion,
                         correo,
-                        descripcion,
-                        estado,
-                        genero};
+                        descripcion};
                 rowClienteRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowClienteRow);
                 return rowClienteRow;
@@ -1161,8 +1111,6 @@ namespace WinAppProyectoVerduras {
                 this.columndireccion = base.Columns["direccion"];
                 this.columncorreo = base.Columns["correo"];
                 this.columndescripcion = base.Columns["descripcion"];
-                this.columnestado = base.Columns["estado"];
-                this.columngenero = base.Columns["genero"];
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1184,10 +1132,6 @@ namespace WinAppProyectoVerduras {
                 base.Columns.Add(this.columncorreo);
                 this.columndescripcion = new global::System.Data.DataColumn("descripcion", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndescripcion);
-                this.columnestado = new global::System.Data.DataColumn("estado", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnestado);
-                this.columngenero = new global::System.Data.DataColumn("genero", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columngenero);
                 this.Constraints.Add(new global::System.Data.UniqueConstraint("ClienteKey1", new global::System.Data.DataColumn[] {
                                 this.columnid}, true));
                 this.columnid.AllowDBNull = false;
@@ -2282,7 +2226,7 @@ namespace WinAppProyectoVerduras {
             
             private global::System.Data.DataColumn columndireccion;
             
-            private global::System.Data.DataColumn columntelefeno;
+            private global::System.Data.DataColumn columntelefono;
             
             private global::System.Data.DataColumn columnimagen;
             
@@ -2383,9 +2327,9 @@ namespace WinAppProyectoVerduras {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn telefenoColumn {
+            public global::System.Data.DataColumn telefonoColumn {
                 get {
-                    return this.columntelefeno;
+                    return this.columntelefono;
                 }
             }
             
@@ -2458,7 +2402,7 @@ namespace WinAppProyectoVerduras {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public EmpleadoRow AddEmpleadoRow(string cedula, string nombre, string apellido, string correo, string contrasenia, string direccion, string telefeno, string imagen, string rol, string genero, string estado) {
+            public EmpleadoRow AddEmpleadoRow(string cedula, string nombre, string apellido, string correo, string contrasenia, string direccion, string telefono, string imagen, string rol, string genero, string estado) {
                 EmpleadoRow rowEmpleadoRow = ((EmpleadoRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         null,
@@ -2468,7 +2412,7 @@ namespace WinAppProyectoVerduras {
                         correo,
                         contrasenia,
                         direccion,
-                        telefeno,
+                        telefono,
                         imagen,
                         rol,
                         genero,
@@ -2502,7 +2446,7 @@ namespace WinAppProyectoVerduras {
                 this.columncorreo = base.Columns["correo"];
                 this.columncontrasenia = base.Columns["contrasenia"];
                 this.columndireccion = base.Columns["direccion"];
-                this.columntelefeno = base.Columns["telefeno"];
+                this.columntelefono = base.Columns["telefono"];
                 this.columnimagen = base.Columns["imagen"];
                 this.columnrol = base.Columns["rol"];
                 this.columngenero = base.Columns["genero"];
@@ -2526,8 +2470,8 @@ namespace WinAppProyectoVerduras {
                 base.Columns.Add(this.columncontrasenia);
                 this.columndireccion = new global::System.Data.DataColumn("direccion", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndireccion);
-                this.columntelefeno = new global::System.Data.DataColumn("telefeno", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columntelefeno);
+                this.columntelefono = new global::System.Data.DataColumn("telefono", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columntelefono);
                 this.columnimagen = new global::System.Data.DataColumn("imagen", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnimagen);
                 this.columnrol = new global::System.Data.DataColumn("rol", typeof(string), null, global::System.Data.MappingType.Element);
@@ -2823,49 +2767,17 @@ namespace WinAppProyectoVerduras {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string color {
+            public string stock {
                 get {
                     try {
-                        return ((string)(this[this.tableProducto.colorColumn]));
+                        return ((string)(this[this.tableProducto.stockColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'color\' de la tabla \'Producto\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'stock\' de la tabla \'Producto\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableProducto.colorColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string cantidad {
-                get {
-                    try {
-                        return ((string)(this[this.tableProducto.cantidadColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'cantidad\' de la tabla \'Producto\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableProducto.cantidadColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string marca {
-                get {
-                    try {
-                        return ((string)(this[this.tableProducto.marcaColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'marca\' de la tabla \'Producto\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableProducto.marcaColumn] = value;
+                    this[this.tableProducto.stockColumn] = value;
                 }
             }
             
@@ -2994,38 +2906,14 @@ namespace WinAppProyectoVerduras {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IscolorNull() {
-                return this.IsNull(this.tableProducto.colorColumn);
+            public bool IsstockNull() {
+                return this.IsNull(this.tableProducto.stockColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetcolorNull() {
-                this[this.tableProducto.colorColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IscantidadNull() {
-                return this.IsNull(this.tableProducto.cantidadColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetcantidadNull() {
-                this[this.tableProducto.cantidadColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsmarcaNull() {
-                return this.IsNull(this.tableProducto.marcaColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetmarcaNull() {
-                this[this.tableProducto.marcaColumn] = global::System.Convert.DBNull;
+            public void SetstockNull() {
+                this[this.tableProducto.stockColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3191,38 +3079,6 @@ namespace WinAppProyectoVerduras {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string estado {
-                get {
-                    try {
-                        return ((string)(this[this.tableCliente.estadoColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'estado\' de la tabla \'Cliente\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableCliente.estadoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string genero {
-                get {
-                    try {
-                        return ((string)(this[this.tableCliente.generoColumn]));
-                    }
-                    catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'genero\' de la tabla \'Cliente\' es DBNull.", e);
-                    }
-                }
-                set {
-                    this[this.tableCliente.generoColumn] = value;
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IscedulaNull() {
                 return this.IsNull(this.tableCliente.cedulaColumn);
             }
@@ -3303,30 +3159,6 @@ namespace WinAppProyectoVerduras {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetdescripcionNull() {
                 this[this.tableCliente.descripcionColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsestadoNull() {
-                return this.IsNull(this.tableCliente.estadoColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetestadoNull() {
-                this[this.tableCliente.estadoColumn] = global::System.Convert.DBNull;
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IsgeneroNull() {
-                return this.IsNull(this.tableCliente.generoColumn);
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SetgeneroNull() {
-                this[this.tableCliente.generoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3910,17 +3742,17 @@ namespace WinAppProyectoVerduras {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string telefeno {
+            public string telefono {
                 get {
                     try {
-                        return ((string)(this[this.tableEmpleado.telefenoColumn]));
+                        return ((string)(this[this.tableEmpleado.telefonoColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'telefeno\' de la tabla \'Empleado\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'telefono\' de la tabla \'Empleado\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableEmpleado.telefenoColumn] = value;
+                    this[this.tableEmpleado.telefonoColumn] = value;
                 }
             }
             
@@ -4074,14 +3906,14 @@ namespace WinAppProyectoVerduras {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool IstelefenoNull() {
-                return this.IsNull(this.tableEmpleado.telefenoColumn);
+            public bool IstelefonoNull() {
+                return this.IsNull(this.tableEmpleado.telefonoColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void SettelefenoNull() {
-                this[this.tableEmpleado.telefenoColumn] = global::System.Convert.DBNull;
+            public void SettelefonoNull() {
+                this[this.tableEmpleado.telefonoColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]

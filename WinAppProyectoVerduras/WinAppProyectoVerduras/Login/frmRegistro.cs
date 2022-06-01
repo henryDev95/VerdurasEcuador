@@ -15,7 +15,10 @@ namespace WinAppProyectoVerduras.Login
     public partial class frmRegistro : Form
     {
         public cEmpleados empleados = new cEmpleados();
-       
+        Clases.ValidarClienteCam validarCampos = new Clases.ValidarClienteCam();
+        Clases.Correo ValidadCorreo = new Clases.Correo();
+        public string cedula, nombre, apellido, correo, contraseña, direccion, telefono, genero, estado, imagen, rol; 
+        
         public frmRegistro()
         {
             InitializeComponent();
@@ -30,17 +33,16 @@ namespace WinAppProyectoVerduras.Login
 
         private void btnRegistrar_Click(object sender, EventArgs e)
         {
-            if (!validarDatos())
-            {
+                      
                 object[] vec = new object[12];
-                vec[1] = "name imahen";
-                vec[2] = "name imahen";
-                vec[3] = "name imahen";
-                vec[4] = "name imahen";
-                vec[5] = "name imahen";
-                vec[6] = "name imahen";
-                vec[7] = "name imahen";
-                vec[8] = "name imahen";
+                vec[1] = cedula;
+                vec[2] = nombre;
+                vec[3] = apellido;
+                vec[4] = correo;
+                vec[5] = contraseña;
+                vec[6] = direccion;
+                vec[7] = telefono;
+                vec[8] = imagen;
                 vec[9] = "name imahen";
                 vec[10] = "name imahen";
                 vec[11] = "name imahen";
@@ -48,25 +50,11 @@ namespace WinAppProyectoVerduras.Login
                 empleados.guardarEmpleado(vec);
                 MessageBox.Show("El empleado se registro correctamente", "Registro", MessageBoxButtons.OK);
                 
-            }
+        
         
         }
 
-        public bool validarDatos()
-        {
-            if (txtCedula.Texts == "" || txtNombre.Texts == "" || txtApellido.Texts == "" || txtCorreo.Texts == "" || txtDireccion.Texts == "" || txtCorreo.Texts == "")
-            {
-                MessageBox.Show("Ingrese todos los datos");
-                return false;
-             }
-            if (txtContraseña.Texts != texBxConfirmarContra.Texts)
-            {
-                MessageBox.Show("Las constrasenas no coinsiden");
-                return false;
-            }
-
-            return true;
-        }
+       
 
         private void botonImagen_Click(object sender, EventArgs e)
         {
@@ -74,7 +62,8 @@ namespace WinAppProyectoVerduras.Login
             {
                 if (openFileDialog1.ShowDialog() == DialogResult.OK)
                 {
-                    string imagen = openFileDialog1.FileName; // gurda la direccion de la imagen
+                    imagen = openFileDialog1.FileName; // gurda la direccion de la imagen
+                    MessageBox.Show(imagen);
                     pbxFotoPerfil.Image = Image.FromFile(imagen); // carga la imagen¡
                     pbxFotoPerfil.SizeMode = PictureBoxSizeMode.StretchImage;
 
@@ -85,158 +74,240 @@ namespace WinAppProyectoVerduras.Login
                 MessageBox.Show("El archivo seleccionado no es un tipo de imagen válido");
             }
         }
-
-        private void txtContraseña_Enter(object sender, EventArgs e)
-        {
-            if (txtContraseña.Texts == "Contraseña")
-            {
-                txtContraseña.Texts = "";
-                txtContraseña.PasswordChar = true;
-            }
-
-        }
-
-        private void txtContraseña_Leave(object sender, EventArgs e)
-        {
-            if (txtContraseña.Texts == "")
-            {
-                txtContraseña.Texts = "Contraseña";
-                txtContraseña.PasswordChar = false;
-            }
-
-        }
-
-       
+           
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
-         private void panelBarra_MouseDown(object sender, MouseEventArgs e)
+        private void panelBarra_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        private void txtCedula_Leave(object sender, EventArgs e)
+
+       
+        private void txtCedula_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (txtCedula.Texts == "")
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+                (e.KeyChar != '.'))
             {
-                txtCedula.Texts = "Cédula";
+                e.Handled = true;
+                MessageBox.Show("En este campo, se coloca números");
                
             }
-        }
 
-        private void txtCedula_Enter(object sender, EventArgs e)
-        {
-            if (txtCedula.Texts == "Cédula")
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
             {
-                txtCedula.Texts = "";
-             
+                if (txtCedula.Text == "")
+                {
+                    txtCedula.Focus();
+                }
+                else {
+
+                    if ((txtCedula.Text.Length == 10 ))
+                    {
+                        if ((validarCampos.validadCedula(txtCedula.Text)))
+                        {
+                            cedula = txtCedula.Text;
+                            TxtNombre.Focus();
+                        }
+                        else
+                        {
+                            txtCedula.Focus();
+                            MessageBox.Show("!Cédula Incorrecta! ");
+                            txtCedula.Clear();
+                        }
+                    }
+                    else
+                    {
+                        txtCedula.Focus();
+                        MessageBox.Show("!Longuitud de la cédula incorrecta! ");
+                        txtCedula.Clear();
+                    }
+                                     
+                }
             }
-        }
+       }
 
-        private void txtNombre_Leave(object sender, EventArgs e)
+        private void TxtNombre_KeyPress(object sender, KeyPressEventArgs e)
         {
-
-            if (txtNombre.Texts == "")
+            if ((e.KeyChar >= 33 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
             {
-                txtNombre.Texts = "Nombre";        
+                MessageBox.Show("Solo letras", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
             }
-        }
 
-        private void txtNombre_Enter(object sender, EventArgs e)
-        {
-            if (txtNombre.Texts == "Nombre")
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
             {
-                txtNombre.Texts = "";
-            }
-        }
-
-        private void txtApellido_Leave(object sender, EventArgs e)
-        {
-
-            if (txtApellido.Texts == "")
-            {
-                txtApellido.Texts = "Apellido";
-            }
-        }
-
-        private void txtApellido_Enter(object sender, EventArgs e)
-        {
-            if (txtApellido.Texts == "Apellido")
-            {
-                txtApellido.Texts = "";
-            }
-        }
-
-        private void txtDireccion_Leave(object sender, EventArgs e)
-        {
-            if (txtDireccion.Texts == "")
-            {
-                txtDireccion.Texts = "Dirección";
-            }
-          
-        }
-
-        private void txtDireccion_Enter(object sender, EventArgs e)
-        {
-            if (txtDireccion.Texts == "Dirección")
-            {
-                txtDireccion.Texts = "";
-            }
-        }
-
-        private void textTelefono_Leave(object sender, EventArgs e)
-        {
-            if (textTelefono.Texts == "")
-            {
-                textTelefono.Texts = "Teléfono";
-            }
-        }
-
-        private void textTelefono_Enter(object sender, EventArgs e)
-        {
-            if (textTelefono.Texts == "Telefono")
-            {
-                textTelefono.Texts = "";
-            }
-        }
-
-        private void txtCorreo_Leave(object sender, EventArgs e)
-        {
-
-            if (txtCorreo.Texts == "")
-            {
-                txtCorreo.Texts = "Correo Electrónico";
-            }
-            
-        }
-
-        private void txtCorreo_Enter(object sender, EventArgs e)
-        {
-            if (txtCorreo.Texts == "Correo Electrónico")
-            {
-                txtCorreo.Texts = "";
-            }
-        }
-
-        private void texBxConfirmarContra_Leave(object sender, EventArgs e)
-        {
-            if (texBxConfirmarContra.Texts == "")
-            {
-                texBxConfirmarContra.Texts = "Confirmar Contraseña";
-                texBxConfirmarContra.PasswordChar = false;
+                if (TxtNombre.Text == "")
+                {
+                    TxtNombre.Focus();
+                }
+                else
+                {
+                    nombre = TxtNombre.Text;
+                    TxtApellido.Focus();
+                   
+                }
             }
 
         }
 
-        private void texBxConfirmarContra_Enter(object sender, EventArgs e)
+        private void TxtApellido_KeyPress(object sender, KeyPressEventArgs e)
         {
-            if (texBxConfirmarContra.Texts == "ConfirmarContra")
+
+            if ((e.KeyChar >= 33 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
             {
-                texBxConfirmarContra.Texts = "";
-                texBxConfirmarContra.PasswordChar = true;
+                MessageBox.Show("Solo letras", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
+
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                if (TxtApellido.Text == "")
+                {
+                    TxtApellido.Focus();
+                }
+                else
+                {
+                    apellido = TxtApellido.Text;
+                    TxtDireccion.Focus();
+
+                }
+            }
+
+        }
+
+        private void TxtTelefono_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) &&
+               (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+                MessageBox.Show("En este campo, se coloca números");
+
+            }
+
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                if (TxtTelefono.Text == "")
+                {
+                    TxtTelefono.Focus();
+                }
+                else
+                {
+
+                    if (!(validarCampos.ValidarTelefonos7a10Digitos(TxtTelefono.Text)))
+                    {
+                        TxtTelefono.Focus();
+                        MessageBox.Show("!Teléfono Incorrecta! ");
+                        TxtTelefono.Clear();
+                    }
+                    else
+                    {
+                        telefono = TxtTelefono.Text;
+                    }
+                   
+
+                }
+            }
+        }
+
+        private void TxtDireccion_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 33 && e.KeyChar <= 64) || (e.KeyChar >= 91 && e.KeyChar <= 96) || (e.KeyChar >= 123 && e.KeyChar <= 255))
+            {
+                MessageBox.Show("Solo letras", "Advertencia", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
+                return;
+            }
+
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                if (TxtDireccion.Text == "")
+                {
+                    TxtDireccion.Focus();
+                }
+                else
+                {
+                    TxtTelefono.Focus();
+
+                }
+            }
+        }
+
+        private void TxtCorreo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                if (TxtCorreo.Text == "")
+                {
+                    TxtCorreo.Focus();
+                }
+                else
+                {
+                    if (ValidadCorreo.ValidarEmail(TxtCorreo.Text))
+                    {
+                        correo = TxtCorreo.Text;
+                        TxtContraseña.Focus();
+                    }
+                    else {
+                        TxtCorreo.Focus();
+                        MessageBox.Show("!Correo Electrónico Incorrecto! ");
+                        TxtCorreo.Clear();
+                    }
+
+                }
+            }
+        }
+
+        private void TxtContraseña_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                if (TxtContraseña.Text == "")
+                {
+                    TxtContraseña.Focus();
+                }
+                else
+                {
+                    if (validarCampos.IsValidPassword(TxtContraseña.Text))
+                    {
+                        contraseña = TxtContraseña.Text;
+                        TxtConfimarContra.Focus();
+                    }
+                    else
+                    {
+                        TxtContraseña.Focus();
+                        MessageBox.Show("!Contraseña no permitída! ");
+                        TxtContraseña.Clear();
+                    }
+
+                }
+            }
+        }
+
+        private void TxtConfimarContra_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == Convert.ToChar(Keys.Enter))
+            {
+                if (TxtConfimarContra.Text == "")
+                {
+                    TxtConfimarContra.Focus();
+                }
+                else
+                {
+                    if (!validarCampos.ValidarConfirmacionContraseña(TxtContraseña.Text ,TxtConfimarContra.Text))
+                    {
+                        TxtConfimarContra.Focus();
+                        MessageBox.Show("!La Contraseña no es igual! ");
+                        TxtConfimarContra.Clear();
+                    }
+                }
             }
         }
     }

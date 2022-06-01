@@ -7,9 +7,12 @@ using System.Text.RegularExpressions;
 
 namespace WinAppProyectoVerduras.Clases
 {
-    public static class Correo
+   class Correo
     {
-        public static bool ValidarEmail(string comprobarEmail)
+
+        public Correo() { }
+
+        public  bool ValidarEmail(string comprobarEmail)
         {
             string emailFormato;
             emailFormato = "\\w+([-+.']\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*";

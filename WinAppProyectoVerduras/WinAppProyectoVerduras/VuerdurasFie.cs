@@ -43,16 +43,14 @@ namespace WinAppProyectoVerduras
             return exise;
         }
 
-
-        public void guardarEmpleado(object[] vec)
+         public void guardarEmpleado(object[] vec)
         {
             if (ValidadExisteArchivo())
             {
-                this.empleados.ReadXml("E:\\empleados.xml");
-            }
-          
+                this.empleados.ReadXml("D:\\empleados.xml");
+            }     
                 empleados.Rows.Add(vec);
-                empleados.WriteXml("E:\\empleados.xml");
+                empleados.WriteXml("D:\\empleados.xml");
                 System.Console.WriteLine("Guardado Automaticamente");
                 
         }
@@ -155,37 +153,53 @@ namespace WinAppProyectoVerduras
     public class cClientes
     {
 
-        DataSet1.ClienteDataTable clientes;
+        DataSet1.ClienteDataTable clientes = new DataSet1.ClienteDataTable();
 
         public cClientes()
         {
-            cargarClientes();
+                 
         }
 
-        public void cargarClientes()
+        public bool ValidadExisteArchivo()
         {
-            if (!(File.Exists("e:\\clientes.xml")))
+            bool exise = false;
+
+            if (File.Exists("e:\\clientes.xml"))
             {
-                clientes = new DataSet1.ClienteDataTable();
-                clientes.WriteXml("e:\\clientes.xml");
+                exise = true;
             }
             else
             {
-                clientes = new DataSet1.ClienteDataTable();
+                System.Console.WriteLine("No existe el contenido");
+            }
+
+            return exise;
+        }
+
+        public void cargardatos()
+        {
+            if (ValidadExisteArchivo())
+            {
                 this.clientes.ReadXml("e:\\clientes.xml");
             }
         }
 
-
         public void guardarCliente(object[] cliente)
         {
+            if(ValidadExisteArchivo())
+            {
+                this.clientes.ReadXml("e:\\clientes.xml");
+            }
             clientes.Rows.Add(cliente);
             clientes.WriteXml("e:\\clientes.xml");
+            System.Console.WriteLine("Guardado Automaticamente");
+           
 
         }
 
-        public DataSet1.ClienteDataTable getProcutosAll()
+        public DataSet1.ClienteDataTable getClientesAll()
         {
+            this.clientes.ReadXml("e:\\clientes.xml");
             return clientes;
         }
 

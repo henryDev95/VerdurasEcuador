@@ -12,9 +12,17 @@ namespace WinAppProyectoVerduras.Clientes
 {
     public partial class frmClientes : Form
     {
+        cClientes Clientes = new cClientes();
         public frmClientes()
         {
             InitializeComponent();
+            cargarDatos();
+        }
+
+        public void cargarDatos()
+        {
+            dataGridView1.Refresh();
+            dataGridView1.DataSource = Clientes.getClientesAll();
         }
 
         //Abrir formularios hijos en panel contenedor
@@ -54,6 +62,7 @@ namespace WinAppProyectoVerduras.Clientes
         private void button1_Click(object sender, EventArgs e)
         {
             AbrirFormulariosHijos(new frmClientesRegistros());
+            dataGridView1.Refresh();
         }
 
         private void pnlContenedor_Paint(object sender, PaintEventArgs e)

@@ -62,6 +62,7 @@
     <Compile Include="Clases\TextBox.Designer.cs">
       <DependentUpon>TextBox.cs</DependentUpon>
     </Compile>
+    <Compile Include="Clases\ValidarClienteCam.cs" />
     <Compile Include="Clientes\frmClientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -427,6 +428,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-gender-equality-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-description-64.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
