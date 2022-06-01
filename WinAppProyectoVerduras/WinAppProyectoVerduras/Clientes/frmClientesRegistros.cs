@@ -243,11 +243,19 @@ namespace WinAppProyectoVerduras.Clientes
             vec[4] = direccion;
             vec[5] = correo;
             vec[6] = descripcion;
-            clientes.guardarCliente(vec);
-            MessageBox.Show("El cliente se registro correctamente");
+
+            if (!clientes.getClienteCedula(vec[0].ToString()))
+            {
+                clientes.guardarCliente(vec);
+                MessageBox.Show("El cliente se registro correctamente");
+
+            }
+            else
+            {
+                MessageBox.Show("!Ya existe un cliente con esa cédula!");
+            }
             limpiarCuadroTexto();
             limpiarVariable();
-            
 
         }
 

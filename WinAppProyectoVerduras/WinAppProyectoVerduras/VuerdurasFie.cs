@@ -154,7 +154,7 @@ namespace WinAppProyectoVerduras
     {
 
         DataSet1.ClienteDataTable clientes = new DataSet1.ClienteDataTable();
-
+        System.Data.DataRow[] vect;
         public cClientes()
         {
                  
@@ -189,7 +189,7 @@ namespace WinAppProyectoVerduras
 
         }
 
-        public DataSet1.ClienteDataTable getClientesAll()
+        public DataSet1.ClienteDataTable getClientesAll() // funcion para cargar los datos
         {
                      
             if (ValidadExisteArchivo())
@@ -201,22 +201,27 @@ namespace WinAppProyectoVerduras
             return clientes;
         }
 
-        public void editarProducto(object[] producto)
+        public void editarCliente(object[] cliente) // funcion para editar
         {
-            clientes.Rows.Add(producto);
-            clientes.WriteXml("e:\\productos.xml");
-
-
+            vect[0]["cedula"] = cliente[0];
+            vect[0]["nombre"] = cliente[1];
+            vect[0]["apellido"] = cliente[2];
+            vect[0]["telefono"] = cliente[3];
+            vect[0]["direccion"] = cliente[4];
+            vect[0]["correo"] = cliente[5];
+            vect[0]["descripcion"] = cliente[6];
+            vect[0].AcceptChanges();
+            clientes.WriteXml("e:\\clientes.xml");
         }
 
-        public object[] getClienteId(string cedula)
+        public object[] getClienteId(string cedula) // funcion para buscar por cédula
         {
             object[] cliente = new object[8];
             if (ValidadExisteArchivo())
             {
                 this.clientes.Clear();
                 clientes.ReadXml("e:\\clientes.xml");
-                System.Data.DataRow[] vect;
+                
                 vect = clientes.Select("cedula ='" + cedula + "'");
                 if (vect.Length > 0)
                 {
@@ -233,9 +238,36 @@ namespace WinAppProyectoVerduras
             return cliente;
         }
 
-        public void EliminarCliente(int clienteId)
+        public void EliminarCliente(object[] cliente)
         {
+            vect[0]["cedula"] = cliente[0];
+            vect[0]["nombre"] = cliente[1];
+            vect[0]["apellido"] = cliente[2];
+            vect[0]["telefono"] = cliente[3];
+            vect[0]["direccion"] = cliente[4];
+            vect[0]["correo"] = cliente[5];
+            vect[0]["descripcion"] = cliente[6];
+            vect[0].Delete();
+            clientes.WriteXml("e:\\clientes.xml");
+        }
 
+
+        public bool getClienteCedula(string cedula) // funcion para buscar por cédula
+        {
+            bool encontrado = false;
+            if (ValidadExisteArchivo())
+            {
+                this.clientes.Clear();
+                clientes.ReadXml("e:\\clientes.xml");
+
+                vect = clientes.Select("cedula ='" + cedula + "'");
+                if (vect.Length > 0)
+                {
+                    encontrado = true;
+                }
+            }
+
+            return encontrado;
         }
 
         public int cantidadClientes()
