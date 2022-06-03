@@ -39,6 +39,7 @@ namespace WinAppProyectoVerduras.Login
             this.TxtCorreo = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.botonImagen = new WinAppProyectoVerduras.Clases.Botones();
+            this.pbxFotoPerfil = new System.Windows.Forms.PictureBox();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
@@ -63,11 +64,11 @@ namespace WinAppProyectoVerduras.Login
             this.pnlContenedor = new System.Windows.Forms.Panel();
             this.panelBarra = new System.Windows.Forms.Panel();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
-            this.pbxFotoPerfil = new System.Windows.Forms.PictureBox();
             this.pnlDelantero.SuspendLayout();
             this.panel1.SuspendLayout();
             this.pnContlogin.SuspendLayout();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxFotoPerfil)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -80,7 +81,6 @@ namespace WinAppProyectoVerduras.Login
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.pnlContenedor.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pbxFotoPerfil)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlDelantero
@@ -192,6 +192,15 @@ namespace WinAppProyectoVerduras.Login
             this.botonImagen.UseVisualStyleBackColor = false;
             this.botonImagen.Click += new System.EventHandler(this.botonImagen_Click);
             // 
+            // pbxFotoPerfil
+            // 
+            this.pbxFotoPerfil.BackColor = System.Drawing.Color.GhostWhite;
+            this.pbxFotoPerfil.Location = new System.Drawing.Point(20, 42);
+            this.pbxFotoPerfil.Name = "pbxFotoPerfil";
+            this.pbxFotoPerfil.Size = new System.Drawing.Size(93, 66);
+            this.pbxFotoPerfil.TabIndex = 7;
+            this.pbxFotoPerfil.TabStop = false;
+            // 
             // pictureBox7
             // 
             this.pictureBox7.Image = global::WinAppProyectoVerduras.Properties.Resources.Contraseña___One;
@@ -264,9 +273,9 @@ namespace WinAppProyectoVerduras.Login
             this.label1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.label1.Location = new System.Drawing.Point(36, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(235, 31);
+            this.label1.Size = new System.Drawing.Size(207, 31);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Nuevo Empleado";
+            this.label1.Text = "Nuevo Usuario";
             // 
             // pnlContRegistro
             // 
@@ -381,6 +390,7 @@ namespace WinAppProyectoVerduras.Login
             this.comboBoxGenero.Size = new System.Drawing.Size(163, 21);
             this.comboBoxGenero.TabIndex = 22;
             this.comboBoxGenero.Text = "Genero";
+            this.comboBoxGenero.SelectedIndexChanged += new System.EventHandler(this.comboBoxGenero_SelectedIndexChanged);
             // 
             // pictureBox10
             // 
@@ -423,6 +433,7 @@ namespace WinAppProyectoVerduras.Login
             this.comboBoxRol.Size = new System.Drawing.Size(163, 21);
             this.comboBoxRol.TabIndex = 0;
             this.comboBoxRol.Text = "Rol";
+            this.comboBoxRol.SelectedIndexChanged += new System.EventHandler(this.comboBoxRol_SelectedIndexChanged);
             // 
             // pnlContenedor
             // 
@@ -448,15 +459,6 @@ namespace WinAppProyectoVerduras.Login
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // pbxFotoPerfil
-            // 
-            this.pbxFotoPerfil.BackColor = System.Drawing.Color.GhostWhite;
-            this.pbxFotoPerfil.Location = new System.Drawing.Point(20, 42);
-            this.pbxFotoPerfil.Name = "pbxFotoPerfil";
-            this.pbxFotoPerfil.Size = new System.Drawing.Size(93, 66);
-            this.pbxFotoPerfil.TabIndex = 7;
-            this.pbxFotoPerfil.TabStop = false;
-            // 
             // frmRegistro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -474,6 +476,7 @@ namespace WinAppProyectoVerduras.Login
             this.pnContlogin.ResumeLayout(false);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbxFotoPerfil)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
@@ -487,7 +490,6 @@ namespace WinAppProyectoVerduras.Login
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.pnlContenedor.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pbxFotoPerfil)).EndInit();
             this.ResumeLayout(false);
 
         }

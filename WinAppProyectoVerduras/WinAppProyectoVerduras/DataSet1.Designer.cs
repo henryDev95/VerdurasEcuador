@@ -38,9 +38,11 @@ namespace WinAppProyectoVerduras {
         
         private global::System.Data.DataRelation relationFK_Categoria_Producto;
         
+        private global::System.Data.DataRelation relationFK_Producto_DetalleVenta;
+        
         private global::System.Data.DataRelation relationFK_Factura_DetalleVenta;
         
-        private global::System.Data.DataRelation relationFK_Producto_DetalleVenta;
+        private global::System.Data.DataRelation relationCliente_Factura;
         
         private global::System.Data.SchemaSerializationMode _schemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
         
@@ -321,8 +323,9 @@ namespace WinAppProyectoVerduras {
                 }
             }
             this.relationFK_Categoria_Producto = this.Relations["FK_Categoria_Producto"];
-            this.relationFK_Factura_DetalleVenta = this.Relations["FK_Factura_DetalleVenta"];
             this.relationFK_Producto_DetalleVenta = this.Relations["FK_Producto_DetalleVenta"];
+            this.relationFK_Factura_DetalleVenta = this.Relations["FK_Factura_DetalleVenta"];
+            this.relationCliente_Factura = this.Relations["Cliente_Factura"];
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -353,16 +356,16 @@ namespace WinAppProyectoVerduras {
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.None;
             fkc.UpdateRule = global::System.Data.Rule.None;
-            fkc = new global::System.Data.ForeignKeyConstraint("FK_Factura_DetalleVenta", new global::System.Data.DataColumn[] {
-                        this.tableFactura.idColumn}, new global::System.Data.DataColumn[] {
-                        this.tableDetalleVenta.id_facturaColumn});
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_Producto_DetalleVenta", new global::System.Data.DataColumn[] {
+                        this.tableProducto.idColumn}, new global::System.Data.DataColumn[] {
+                        this.tableDetalleVenta.id_productoColumn});
             this.tableDetalleVenta.Constraints.Add(fkc);
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.None;
             fkc.UpdateRule = global::System.Data.Rule.None;
-            fkc = new global::System.Data.ForeignKeyConstraint("FK_Producto_DetalleVenta", new global::System.Data.DataColumn[] {
-                        this.tableProducto.idColumn}, new global::System.Data.DataColumn[] {
-                        this.tableDetalleVenta.id_productoColumn});
+            fkc = new global::System.Data.ForeignKeyConstraint("FK_Factura_DetalleVenta", new global::System.Data.DataColumn[] {
+                        this.tableFactura.idColumn}, new global::System.Data.DataColumn[] {
+                        this.tableDetalleVenta.id_facturaColumn});
             this.tableDetalleVenta.Constraints.Add(fkc);
             fkc.AcceptRejectRule = global::System.Data.AcceptRejectRule.None;
             fkc.DeleteRule = global::System.Data.Rule.None;
@@ -371,14 +374,18 @@ namespace WinAppProyectoVerduras {
                         this.tableCategoria.idColumn}, new global::System.Data.DataColumn[] {
                         this.tableProducto.categoriaColumn}, false);
             this.Relations.Add(this.relationFK_Categoria_Producto);
-            this.relationFK_Factura_DetalleVenta = new global::System.Data.DataRelation("FK_Factura_DetalleVenta", new global::System.Data.DataColumn[] {
-                        this.tableFactura.idColumn}, new global::System.Data.DataColumn[] {
-                        this.tableDetalleVenta.id_facturaColumn}, false);
-            this.Relations.Add(this.relationFK_Factura_DetalleVenta);
             this.relationFK_Producto_DetalleVenta = new global::System.Data.DataRelation("FK_Producto_DetalleVenta", new global::System.Data.DataColumn[] {
                         this.tableProducto.idColumn}, new global::System.Data.DataColumn[] {
                         this.tableDetalleVenta.id_productoColumn}, false);
             this.Relations.Add(this.relationFK_Producto_DetalleVenta);
+            this.relationFK_Factura_DetalleVenta = new global::System.Data.DataRelation("FK_Factura_DetalleVenta", new global::System.Data.DataColumn[] {
+                        this.tableFactura.idColumn}, new global::System.Data.DataColumn[] {
+                        this.tableDetalleVenta.id_facturaColumn}, false);
+            this.Relations.Add(this.relationFK_Factura_DetalleVenta);
+            this.relationCliente_Factura = new global::System.Data.DataRelation("Cliente_Factura", new global::System.Data.DataColumn[] {
+                        this.tableCliente.cedulaColumn}, new global::System.Data.DataColumn[] {
+                        this.tableFactura.cedula_clienteColumn}, false);
+            this.Relations.Add(this.relationCliente_Factura);
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -1511,7 +1518,7 @@ namespace WinAppProyectoVerduras {
             
             private global::System.Data.DataColumn columnnumero_factura;
             
-            private global::System.Data.DataColumn columnid_cliente;
+            private global::System.Data.DataColumn columncedula_cliente;
             
             private global::System.Data.DataColumn columnfecha;
             
@@ -1570,9 +1577,9 @@ namespace WinAppProyectoVerduras {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public global::System.Data.DataColumn id_clienteColumn {
+            public global::System.Data.DataColumn cedula_clienteColumn {
                 get {
-                    return this.columnid_cliente;
+                    return this.columncedula_cliente;
                 }
             }
             
@@ -1637,15 +1644,18 @@ namespace WinAppProyectoVerduras {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public FacturaRow AddFacturaRow(string id, string numero_factura, string id_cliente, string fecha, string total, string estado) {
+            public FacturaRow AddFacturaRow(string id, string numero_factura, ClienteRow parentClienteRowByCliente_Factura, string fecha, string total, string estado) {
                 FacturaRow rowFacturaRow = ((FacturaRow)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         id,
                         numero_factura,
-                        id_cliente,
+                        null,
                         fecha,
                         total,
                         estado};
+                if ((parentClienteRowByCliente_Factura != null)) {
+                    columnValuesArray[2] = parentClienteRowByCliente_Factura[0];
+                }
                 rowFacturaRow.ItemArray = columnValuesArray;
                 this.Rows.Add(rowFacturaRow);
                 return rowFacturaRow;
@@ -1677,7 +1687,7 @@ namespace WinAppProyectoVerduras {
             internal void InitVars() {
                 this.columnid = base.Columns["id"];
                 this.columnnumero_factura = base.Columns["numero_factura"];
-                this.columnid_cliente = base.Columns["id_cliente"];
+                this.columncedula_cliente = base.Columns["cedula_cliente"];
                 this.columnfecha = base.Columns["fecha"];
                 this.columntotal = base.Columns["total"];
                 this.columnestado = base.Columns["estado"];
@@ -1690,8 +1700,8 @@ namespace WinAppProyectoVerduras {
                 base.Columns.Add(this.columnid);
                 this.columnnumero_factura = new global::System.Data.DataColumn("numero_factura", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnnumero_factura);
-                this.columnid_cliente = new global::System.Data.DataColumn("id_cliente", typeof(string), null, global::System.Data.MappingType.Element);
-                base.Columns.Add(this.columnid_cliente);
+                this.columncedula_cliente = new global::System.Data.DataColumn("cedula_cliente", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columncedula_cliente);
                 this.columnfecha = new global::System.Data.DataColumn("fecha", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columnfecha);
                 this.columntotal = new global::System.Data.DataColumn("total", typeof(string), null, global::System.Data.MappingType.Element);
@@ -1703,7 +1713,7 @@ namespace WinAppProyectoVerduras {
                 this.columnid.AllowDBNull = false;
                 this.columnid.Unique = true;
                 this.columnnumero_factura.Caption = "nombre";
-                this.columnid_cliente.Caption = "edad";
+                this.columncedula_cliente.Caption = "edad";
                 this.columnfecha.Caption = "password";
             }
             
@@ -2443,6 +2453,9 @@ namespace WinAppProyectoVerduras {
                 base.Columns.Add(this.columncorreo);
                 this.columndescripcion = new global::System.Data.DataColumn("descripcion", typeof(string), null, global::System.Data.MappingType.Element);
                 base.Columns.Add(this.columndescripcion);
+                this.Constraints.Add(new global::System.Data.UniqueConstraint("ClienteKey1", new global::System.Data.DataColumn[] {
+                                this.columncedula}, false));
+                this.columncedula.Unique = true;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3081,23 +3094,23 @@ namespace WinAppProyectoVerduras {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public FacturaRow FacturaRow {
-                get {
-                    return ((FacturaRow)(this.GetParentRow(this.Table.ParentRelations["FK_Factura_DetalleVenta"])));
-                }
-                set {
-                    this.SetParentRow(value, this.Table.ParentRelations["FK_Factura_DetalleVenta"]);
-                }
-            }
-            
-            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public ProductoRow ProductoRow {
                 get {
                     return ((ProductoRow)(this.GetParentRow(this.Table.ParentRelations["FK_Producto_DetalleVenta"])));
                 }
                 set {
                     this.SetParentRow(value, this.Table.ParentRelations["FK_Producto_DetalleVenta"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public FacturaRow FacturaRow {
+                get {
+                    return ((FacturaRow)(this.GetParentRow(this.Table.ParentRelations["FK_Factura_DetalleVenta"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["FK_Factura_DetalleVenta"]);
                 }
             }
             
@@ -3193,17 +3206,17 @@ namespace WinAppProyectoVerduras {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public string id_cliente {
+            public string cedula_cliente {
                 get {
                     try {
-                        return ((string)(this[this.tableFactura.id_clienteColumn]));
+                        return ((string)(this[this.tableFactura.cedula_clienteColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("El valor de la columna \'id_cliente\' de la tabla \'Factura\' es DBNull.", e);
+                        throw new global::System.Data.StrongTypingException("El valor de la columna \'cedula_cliente\' de la tabla \'Factura\' es DBNull.", e);
                     }
                 }
                 set {
-                    this[this.tableFactura.id_clienteColumn] = value;
+                    this[this.tableFactura.cedula_clienteColumn] = value;
                 }
             }
             
@@ -3257,6 +3270,17 @@ namespace WinAppProyectoVerduras {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public ClienteRow ClienteRow {
+                get {
+                    return ((ClienteRow)(this.GetParentRow(this.Table.ParentRelations["Cliente_Factura"])));
+                }
+                set {
+                    this.SetParentRow(value, this.Table.ParentRelations["Cliente_Factura"]);
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool Isnumero_facturaNull() {
                 return this.IsNull(this.tableFactura.numero_facturaColumn);
             }
@@ -3269,14 +3293,14 @@ namespace WinAppProyectoVerduras {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public bool Isid_clienteNull() {
-                return this.IsNull(this.tableFactura.id_clienteColumn);
+            public bool Iscedula_clienteNull() {
+                return this.IsNull(this.tableFactura.cedula_clienteColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void Setid_clienteNull() {
-                this[this.tableFactura.id_clienteColumn] = global::System.Convert.DBNull;
+            public void Setcedula_clienteNull() {
+                this[this.tableFactura.cedula_clienteColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3886,6 +3910,17 @@ namespace WinAppProyectoVerduras {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetdescripcionNull() {
                 this[this.tableCliente.descripcionColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public FacturaRow[] GetFacturaRows() {
+                if ((this.Table.ChildRelations["Cliente_Factura"] == null)) {
+                    return new FacturaRow[0];
+                }
+                else {
+                    return ((FacturaRow[])(base.GetChildRows(this.Table.ChildRelations["Cliente_Factura"])));
+                }
             }
         }
         

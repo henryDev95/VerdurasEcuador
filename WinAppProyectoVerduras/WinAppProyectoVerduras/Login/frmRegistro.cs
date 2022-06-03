@@ -43,9 +43,9 @@ namespace WinAppProyectoVerduras.Login
                 vec[6] = direccion;
                 vec[7] = telefono;
                 vec[8] = imagen;
-                vec[9] = "name imahen";
-                vec[10] = "name imahen";
-                vec[11] = "name imahen";
+                vec[9] = rol;
+                vec[10] = genero;
+                vec[11] = "Activo";
                 
                 empleados.guardarEmpleado(vec);
                 MessageBox.Show("El empleado se registro correctamente", "Registro", MessageBoxButtons.OK);
@@ -78,6 +78,17 @@ namespace WinAppProyectoVerduras.Login
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
+
+        private void comboBoxRol_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            rol = comboBoxRol.SelectedItem.ToString();
+        }
+
+        private void comboBoxGenero_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            genero = comboBoxGenero.SelectedItem.ToString();
+        }
+
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
         private void panelBarra_MouseDown(object sender, MouseEventArgs e)

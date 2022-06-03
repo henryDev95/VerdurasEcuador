@@ -47,10 +47,11 @@ namespace WinAppProyectoVerduras
         {
             if (ValidadExisteArchivo())
             {
-                this.empleados.ReadXml("D:\\empleados.xml");
+                this.empleados.Clear();
+                this.empleados.ReadXml("E:\\empleados.xml");
             }     
                 empleados.Rows.Add(vec);
-                empleados.WriteXml("D:\\empleados.xml");
+                empleados.WriteXml("E:\\empleados.xml");
                 System.Console.WriteLine("Guardado Automaticamente");
                 
         }
